@@ -1,0 +1,382 @@
+/*Стили основоного и контентового селекторов при перетягивании с панели элементов*/
+.main-module {
+    width: 100%;
+    height: 80px;
+    background: darkslategray;
+}
+
+.content-module, .module
+{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: gray;
+}
+
+.module
+{
+    line-height: 80px;
+    user-select: none;
+}
+
+/*Вертикальный и горизонтальный ресайзеры и хэндел*/
+.block-resizer
+{
+    cursor: w-resize;
+    height: 100%;
+    width: 5px;
+    top: 0;
+    right: -4px;
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.resizer {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.handle {
+    color: #5A65E0;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    border-right: 5px dashed;
+}
+
+.content-selector .handle
+{
+    color:rgb(97, 186, 82);
+}
+
+.handle:hover
+{
+    cursor:ew-resize;
+}
+
+/*Стили основного селектора на странице*/
+
+.main-selector
+{
+    position: relative;
+    border: 4px solid #5A65E0;
+    margin: 10px auto !important;
+    min-width: 400px;
+    max-width: 100%;
+    min-height: 88px;
+}
+
+/*div.image-module
+{
+    position: relative;
+    border: 4px solid #e0c91d;
+    margin: 10px auto !important;
+    max-width: 100%;
+    min-width: 120px;
+    min-height: 88px;
+    height: 88px;
+}*/
+
+#mainArea > .row
+{
+    display: flex;
+}
+
+#mainArea
+{
+    padding: 10px;
+}
+
+/*Стили контентового селектора на странице*/
+.content-selector
+{
+    border: 4px solid rgb(97, 186, 82);
+    margin: 10px auto;
+    min-width: 45%;
+    max-width: 100%;
+    min-height: 88px;
+    display: flex;
+}
+
+.content {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    z-index:1;
+}
+
+
+/*Меню основного селектора*/
+.block-settings
+{
+    position: absolute;
+    top:0;
+    right: 0;
+    height:30px;
+    width: 100px;
+    z-index: 100;
+    background:#5A65E0;
+    border-bottom-left-radius: 5px;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 2s linear, right 2s linear;
+}
+
+.main-selector:hover .block-settings, .image-module:hover .block-settings
+{
+    opacity: 1;
+    transition: all 0.4s linear;
+}
+
+.block-settings > div {
+    display: inline;
+}
+
+.block-settings span:hover {
+    color: #7fb2f0;
+}
+
+.block-settings span
+{
+    line-height: 25px;
+}
+
+.block-settings > div:hover
+{
+    cursor: pointer;
+}
+
+.block-settings > div:last-child
+{
+    border-bottom: none;
+}
+
+/*Правое меню*/
+#rightSidebar
+{
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 670px;
+    background: #16193B;
+    z-index: 101;
+    overflow-y: scroll;
+}
+
+#rightSidebar::-webkit-scrollbar
+{
+    width: 0;
+}
+
+#rightSidebar #settings-mn, #rightSidebar #settings-bl, #rightSidebar #settings-img, #rightSidebar #mail-block-settings
+{
+    display:none;
+}
+
+/*Выноска с главной страницы*/
+*, .row {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Стили для leftSidebar*/
+#leftSidebar {
+    width: 300px;
+    height: 670px;
+    background: #16193B;
+    position: fixed;
+    z-index:999999;
+}
+
+#leftSidebar .ls-header {
+    user-select: none;
+    height: 40px;
+}
+
+#leftSidebar .ls-header .logo {
+    color: #7FB2F0;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -2px;
+    margin-left: 10px;
+}
+
+#leftSidebar .ls-left-panel {
+    height: 630px;
+    width: 45px;
+    background: #35478c;
+    float: left;
+    line-height: 122px;
+    text-align: center;
+    user-select: none;
+}
+
+#leftSidebar .ls-left-panel .row > div {
+    padding: 0;
+}
+
+#leftSidebar .ls-center-area {
+    height: 670px;
+    width: 250px;
+    float: left;
+}
+
+#leftSidebar .ls-center-area .ls-elements-row {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+#leftSidebar .ls-center-area .ls-elements-row .ls-elements-col {
+    height: 120px;
+    width: 120px;
+    margin-left: 2px;
+    padding: 0;
+    background: #35478c;
+    line-height: 120px;
+    text-align: center;
+    user-select: none;
+}
+
+#leftSidebar .ls-left-panel .main-settings {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#leftSidebar .ls-left-panel .main-settings span:hover, #leftSidebar .ls-center-area .ls-elements-row .ls-elements-col:hover {
+    cursor: pointer;
+}
+
+#leftSidebar .ls-left-panel .main-settings span:hover {
+    color: #7fb2f0;
+}
+
+#leftSidebar .ls-left-panel .row div:not(.main-settings) {
+    color: red;
+}
+
+#leftSidebar .ls-center-area .ls-elements-row .ls-elements-col:hover {
+    background: #7fb2f0;
+}
+
+#leftSidebar .hide-panel span
+{
+    color: #16193B;
+    font-size: 18px;
+}
+#leftSidebar .hide-panel span:hover
+{
+    color: #7fb2f0;
+    cursor: pointer;
+}
+
+/*Стили для mainArea*/
+#mainArea
+{
+    width: 750px;
+    min-height:900px;
+    margin:0 auto;
+    /*border: 2px dashed #7fb2f0;*/
+    /*Временный паддинг*/
+    padding: 0;
+    border: 1px dashed rgba(140,54,128, 0.5);
+}
+
+/*Стили для mainSelector*/
+.block-settings
+{
+    display:none;
+}
+.main-selector, .image-module
+{
+    margin: 0 auto;
+}
+
+/*Умолчания для вложенных категорий*/
+#mainSelector, #contentSelector, #Modules
+{
+    display:none;
+}
+
+/*Вложенные категории*/
+#mainSelector, #contentSelector, #Modules
+{
+    margin-left: 2px;
+}
+#mainSelector .main-module, #contentSelector .content-module, #Modules .module
+{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background: #35478c;
+    margin-bottom: 5px;
+}
+
+#mainSelector .main-module div, #contentSelector .content-module div, #Modules .module div
+{
+    height: 100%;
+}
+
+#mainSelector .main-module div:not(:last-child), #contentSelector .content-module div:not(:last-child), #Modules .module div:not(:last-child)
+{
+    border-right: 1px solid black;
+}
+
+.ls-back-btn span
+{
+    color: #35478c;
+    float: right;
+    font-size: 24px;
+}
+
+.ls-back-btn span:hover
+{
+    cursor: pointer;
+    color: #7fb2f0;
+}
+
+/*Стили для меню настроек*/
+#rightSidebar
+{
+    color: #7FB2F0;
+    padding: 10px;
+}
+#rightSidebar h1
+{
+    text-align: center;
+}
+#rightSidebar .close-rs:hover
+{
+    color:#1b6d85;
+    cursor: pointer;
+}
+
+/*Разместить*/
+.border-hover
+{
+    border-right:5px dashed #5A65E0;
+    padding-right:10px;
+}
+
+.border-hover-content
+{
+    border-right:5px dashed rgb(97, 186, 82);
+    padding-right:10px;
+}
