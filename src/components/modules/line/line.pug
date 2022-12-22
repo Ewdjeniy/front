@@ -1,0 +1,299 @@
+section(id="line-settings")
+  h1  Настройки
+  form(name="lineSettings" method="post" enctype="multipart/form-data")
+    br
+    h4
+      div(id="lineMarginsIndicator" class="group")
+        | ВНЕШНИЕ ОТСТУПЫ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="lineMargins")
+      br
+      h4
+        div(id="lineMarginGroupIndicator" class="group")
+          | &#8195;
+          | Настройка отступов
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="lineMarginEvery")
+        br
+        | &#8195;
+        | Внешний отступ сверху:
+        br
+        | &#8195;
+        input(id="line-margin-top-value" type="number")
+        br
+        input(id="line-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ снизу:
+        br
+        | &#8195;
+        input(id="line-margin-bottom-value" type="number")
+        br
+        input(id="line-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ слева:
+        br
+        | &#8195;
+        input(id="line-margin-left-value" type="number")
+        br
+        input(id="line-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ справа:
+        br
+        | &#8195;
+        input(id="line-margin-right-value" type="number")
+        br
+        input(id="line-margin-right-value-range" type="range" min="0" max="100" step="1")
+        hr
+      br
+      h4
+        div(id="lineVerticalIndicator" class="group")
+          | &#8195;
+          | Вертикаль
+          span(class="glyphicon glyphicon-triangle-bottom")
+      br
+      div(id="line-show-vertical-settings")
+        | &#8195;
+        | Верх
+        input(id="lineMarginTop" name="vertical" type="radio" value="up")
+        br
+        | &#8195;
+        | Центр
+        input(id="lineMarginCenter" name="vertical" type="radio" value="center")
+        br
+        | &#8195;
+        | Низ
+        input(id="lineMarginBottom" name="vertical" type="radio" value="down")
+        hr
+    br
+    h4
+      div(id="lineSettingsIndicator" class="group")
+        | НАСТРОЙКА ЛИНИИ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="lineSettings")
+      br
+      h4
+        div(id="lineChooseIndicator" class="group")
+          | &#8195;
+          | Выбор линии
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="line-choose-settings")
+        br
+        select(id="lineOrImgLine")
+          option(value="img") Картинка
+          option(value="line") Линия
+        br
+        br
+        div(id="lineIcons")
+          img(class="lineIconImg" src=require("./images/divider_7.png"))
+          img(class="lineIconImg" src=require("./images/divider_8.png"))
+          img(class="lineIconImg" src=require("./images/divider_9.png"))
+          img(class="lineIconImg" src=require("./images/divider_10.png"))
+          img(class="lineIconImg" src=require("./images/divider_11.png"))
+        hr
+      br
+      h4
+        div(id="lineSettingsUnderMenuIndicator" class="group")
+          | &#8195;
+          | Настройка линии
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="line-settings-under-menu")
+      
+      
+        br
+        h4
+          div(id="lineStyleIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Стиль линии
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="line-style-settings")
+          br
+          | &#8195;
+          | &#8195;
+          select(id="line-style")
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          hr
+        
+        br
+        h4
+          div(id="lineHeightIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Толщина линии
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="line-height-settings")
+          br
+          | &#8195;
+          | &#8195;
+          input(id="line-height-value" type="number")
+          br
+          input(id="line-height-value-range" type="range" min="0" max="100" step="1")
+          hr
+        
+        br
+        h4
+          div(id="lineColorIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Выбор цвета
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="line-color-settings")
+          br
+          | &#8195;
+          | &#8195;
+          input(id="line-color" type="color")
+          hr
+        
+        
+    br
+    h4
+      div(id="lineAnimationIndicator" class="group")
+        | АНИМАЦИЯ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="show-line-animation-settings")
+      div(id="line-animation-type" style="text-align:center")
+        div
+          br
+          | Тип анимации:
+          br
+          select(id="line-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+        div(id="line-animation-delay" style="text-align:center")
+          div
+            | Задержка анимации (сек):
+            br
+            input(type="number" min="0" max="20" value="0" id="line-animation-delay-value")
+            br
+            input(type="range" id="line-animation-delay-value-range" step="1" min="0" max="20")
+
+
+        div(id="line-animation-duration" style="text-align:center")
+          div
+            | Длительность анимации (сек):
+            br
+            input(type="number" min="0" max="20" value="0" id="line-animation-duration-value")
+            br
+            input(type="range" id="line-animation-duration-value-range" step="1" min="0" max="20")    
+        hr
+    br
+    h4
+      div(id="lineTimeoutIndicator" class="group")
+        | СКРЫТИЕ БЛОКА
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="show-line-timeout-settings")
+      div(id="line-display-none" style="text-align: center;")
+        div
+          br
+          input(type="checkbox" id="line-display-none-value")
+      div(id="line-timeout" style="text-align: center;")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="line-timeout-hour-value")
+          br
+          input(type="range" id="line-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="line-timeout-minute-value")
+          br
+          input(type="range" id="line-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="line-timeout-second-value")
+          br
+          input(type="range" id="line-timeout-second-value-range" step="1" min="0" max="60")

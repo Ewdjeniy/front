@@ -1,0 +1,498 @@
+section(id="button-settings")
+  h1  Настройки
+  form(name="buttonSettings" method="post" enctype="multipart/form-data")
+    br
+    div
+      | Внешний отступ:
+      br
+      br
+      div(id="buttonMarginEvery")
+        | Внешний отступ сверху:
+        br
+        input(id="button-margin-top-value" type="number")
+        br
+        input(id="button-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ снизу:
+        br
+        input(id="button-margin-bottom-value" type="number")
+        br
+        input(id="button-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ слева:
+        br
+        input(id="button-margin-left-value" type="number")
+        br
+        input(id="button-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ справа:
+        br
+        input(id="button-margin-right-value" type="number")
+        br
+        input(id="button-margin-right-value-range" type="range" min="0" max="100" step="1")
+    hr
+    div 
+      | Вертикальное выравнивание:
+      br
+      | Верх
+      input(id="buttonMarginTop" name="vertical" type="radio" value="up")
+      br
+      | Центр
+      input(id="buttonMarginCenter" name="vertical" type="radio" value="center")
+      br
+      | Низ
+      input(id="buttonMarginBottom" name="vertical" type="radio" value="down")
+      br
+    hr
+    div
+      | Выбор шрифта:
+      br
+      input(type="checkbox" id="buttonBold")
+      | &ensp; Bold
+      br
+      select(id="buttonFontFamilySelect")
+        option(value="Tahoma, Arial, Verdana")  Tahoma
+        option(value="Arial, Tahoma, Verdana") Arial
+        option(value="Verdana, Tahoma, Arial") Verdana
+        option(value="Georgia, Tahoma, Arial")  Georgia
+        option(value="Montserrat, Arial, Verdana")  Montserrat Black
+        option(value="Roboto, Arial, Tahoma")  Roboto Black
+    div(id="button-font-size")
+      | Размер шрифта:
+      input(id="button-font-size-value" type="number")
+      br
+      input(id="button-font-size-value-range" type="range" min="1" max="100" step="1")      
+    div(id="button-line-height")
+      | Межстрочный интервал:
+      input(id="button-line-height-value" type="number")
+      br
+      input(id="button-line-height-value-range" type="range" min="1" max="200" step="1")      
+    hr
+    input(type="button" id="buttonEditor" value="Редактирование содержимого")
+    hr
+    div(id="button-link")
+      | Добавление ссылки
+      br
+      | Текущая ссылка:
+      div(id="linkIndicator")
+        | отсутствует
+      br
+      input(type="url" id="buttonUrl")
+      br
+      br
+      input(type="button" id="buttonUrlExec" value="Сделать ссылкой")
+      br
+      br
+      input(type="checkbox" id="buttonTarget")
+      | Открывать в новой вкладке
+    hr
+    div
+      | Цвет текста:
+      input(type="color" value="0" id="button-color-value")      
+    hr
+    div(id="button-background-types" style="text-align: center;")
+      | Цвет кнопки:
+      br
+      div
+        | Заливка
+        input(type="radio" value="color" name="color" id="buttonBackgroundRadioColor" checked)
+        | Градиент
+        input(type="radio" value="gradient" name="color" id="buttonBackgroundRadioGradient")
+      div(id="buttonBackgroundColor" style="text-align: center;")
+        div
+          | Цвет:
+          br
+          input(id="button-main-color" type="color")
+        br
+        div
+          | Непрозрачность:
+          br
+          input(id="button-main-color-opacity" type="number" value="100")
+      div(id="buttonBackgroundGradient" style="text-align: center;")
+        div
+          | Цвет 1:
+          br
+          input(id="button-gradient-color-1" type="color")
+        br
+        div
+          | Цвет 2:
+          br
+          input(id="button-gradient-color-2" type="color")
+        br
+        div
+          | Угол:
+          br
+          input(id="button-gradient-angle" type="number" value="0")
+    hr
+    div(id="button-text-shadow-settings")
+      label(style="text-align:center;")  Тени текста
+      br
+      | Вкл
+      input(id="buttonTextShadowRadioOn" type="radio" name="textShadow")
+      | Выкл
+      input(id="buttonTextShadowRadioOff" type="radio" name="textShadow" checked)
+      div(id="button-text-shadow")
+        div(id="button-text-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="button-text-shadow-color-value")
+        div(id="button-text-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="button-text-shadow-vertical-value")
+            input(type="range" id="button-text-shadow-vertical-value-range" step="1" min="-20" max="20")
+        div(id="button-text-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="button-text-shadow-horizontal-value")
+            input(type="range" id="button-text-shadow-horizontal-value-range" step="1" min="-20" max="20")        
+        div(id="button-text-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="button-text-shadow-blur-value")
+            input(type="range" id="button-text-shadow-blur-value-range" step="1" min="0" max="20")
+        div(id="button-text-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="button-text-shadow-opacity-value")
+            input(type="range" id="button-text-shadow-opacity-value-range" step="1" min="0" max="100")
+    hr
+    div(id="button-height" style="text-align: center")
+      div
+        | Высота кнопки:
+        br
+        input(type="checkbox" id="autoHeight")
+        | Автовысота
+        br
+        input(type="number" value="0" id="button-height-value")
+        input(type="range" id="button-height-value-range" step="1" min="0" max="600")
+      div
+        | Ширина кнопки:
+        br
+        input(type="checkbox" id="autoWidth")
+        | На всю ширину
+        br
+        input(type="number" value="0" id="button-width-value")
+        input(type="range" id="button-width-value-range" step="1" min="0" max="600")
+    hr
+    div
+      | Граница изображения:
+      br
+      | Все границы
+      input(id="buttonBorderRadioAll" name="button_Border" type="radio" value="all" checked)
+      br
+      | Каждая граница
+      input(id="buttonBorderRadioEvery" name="button_Border" type="radio" value="each")
+      br
+      br
+      div(id="buttonBorderAll")
+        | Цвет границы:
+        br
+        input(id="button-border-color-value" type="color")
+        br
+        | Толщина границы:
+        br
+        input(id="button-border-value" type="number")
+        br
+        input(id="button-border-value-range" type="range" min="0" max="100" step="1")
+        | Закругление углов:
+        br
+        input(id="button-border-radius" type="number")
+        br
+        input(id="button-border-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль границы:
+        br
+        select(id="button-border-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        
+      
+      div(id="buttonBorderEvery")
+        | Цвет верхней границы:
+        br
+        input(id="button-border-top-color" type="color")
+        br
+        | Толщина верхней границы:
+        br
+        input(id="button-border-top-value" type="number")
+        br
+        input(id="button-border-top-value-range" type="range" min="0" max="100" step="1")
+        | Закругление верхнего левого края:
+        br
+        input(id="button-border-left-top-radius" type="number")
+        br
+        input(id="button-border-left-top-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль верхней границы:
+        br
+        select(id="button-border-top-style-value")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет правой границы:
+        br
+        input(id="button-border-right-color" type="color")
+        br
+        | Толщина правой границы:
+        br
+        input(id="button-border-right-value" type="number")
+        br
+        input(id="button-border-right-value-range" type="range" min="0" max="100" step="1")
+        | Закругление правого верхнего угла:
+        br
+        input(id="button-border-right-radius" type="number")
+        br
+        input(id="button-border-right-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль правой границы:
+        br
+        select(id="button-border-right-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет нижней границы:
+        br
+        input(id="button-border-bottom-color" type="color")
+        br
+        | Толщина нижней границы:
+        br
+        input(id="button-border-bottom-value" type="number")
+        br
+        input(id="button-border-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Закругление правого нижнего угла:
+        br
+        input(id="button-border-bottom-right-radius" type="number")
+        br
+        input(id="button-border-bottom-right-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль нижней границы:
+        br
+        select(id="button-border-bottom-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        | Цвет левой границы:
+        br
+        br
+        input(id="button-border-left-color" type="color")
+        br
+        | Толщина левой границы:
+        br
+        input(id="button-border-left-value" type="number")
+        br
+        input(id="button-border-left-value-range" type="range" min="0" max="100" step="1")
+        | Закругление левого нижнего угла:
+        br
+        input(id="button-border-bottom-left-radius" type="number")
+        br
+        input(id="button-border-bottom-left-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль левой границы:
+        br
+        select(id="button-border-left-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+    hr
+    div(id="button-shadow-settings")
+      label(style="text-align:center")  Тени
+      br
+      | Вкл
+      input(id="buttonShadowRadioOn" type="radio" name="button_shadow")
+      | Выкл
+      input(id="buttonShadowRadioOff" type="radio" name="button_shadow" checked)
+      div(id="button-shadow")
+        div(id="button-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="button-shadow-color-value")
+        div(id="button-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="button-shadow-vertical-value")
+            input(type="range" id="button-shadow-vertical-value-range" step="1" min="-200" max="200")
+        div(id="button-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="button-shadow-horizontal-value")
+            input(type="range" id="button-shadow-horizontal-value-range" step="1" min="-200" max="200")
+        div(id="button-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="button-shadow-blur-value")
+            input(type="range" id="button-shadow-blur-value-range" step="1" min="0" max="200")
+        div(id="button-shadow-spread" style="text-align: center")
+          div
+            | Размах:
+            br
+            input(type="number" value="0" id="button-shadow-spread-value")
+            input(type="range" id="button-shadow-spread-value-range" step="1" min="-200" max="200")
+        div(id="button-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="button-shadow-opacity-value")
+            input(type="range" id="button-shadow-opacity-value-range" step="1" min="0" max="100")
+        div(id="button-shadow-inset" style="text-align: center")
+          div
+            | Внутренняя тень:
+            input(type="checkbox" id="button-shadow-inset-value")
+    hr
+    div(id="button-animation" style="text-align:center")
+      div(id="button-animation-type")
+        div
+          | Тип анимации:
+          br
+          select(id="button-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+      div(id="button-animation-delay")
+        div
+          | Задержка анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="button-animation-delay-value")
+          br
+          input(type="range" id="button-animation-delay-value-range" step="1" min="0" max="20")
+        
+      
+      div(id="button-animation-duration")
+        div
+          | Длительность анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="button-animation-duration-value")
+          br
+          input(type="range" id="button-animation-duration-value-range" step="1" min="0" max="20")    
+    hr
+    div(id="button-timeout" style="text-align: center")
+      div(id="button-display-none")
+        div
+          | Скрытие блока:
+          br
+          input(type="checkbox" id="button-display-none-value")
+      div(id="button-timeout")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="button-timeout-hour-value")
+          br
+          input(type="range" id="button-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="button-timeout-minute-value")
+          br
+          input(type="range" id="button-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="button-timeout-second-value")
+          br
+          input(type="range" id="button-timeout-second-value-range" step="1" min="0" max="60")

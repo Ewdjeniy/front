@@ -1,0 +1,973 @@
+section(id="form-settings")
+  h1  Настройки
+  form(name="formSettings" method="post" enctype="multipart/form-data")
+    br
+    h4
+      div(id="formMarginGroupIndicator" class="group")
+        | ВНЕШНИЕ ОТСТУПЫ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    br
+    div(id="formMarginEvery")
+      | Внешний отступ сверху:
+      br
+      input(id="form-margin-top-value" type="number")
+      br
+      input(id="form-margin-top-value-range" type="range" min="0" max="100" step="1")
+      | Внешний отступ снизу:
+      br
+      input(id="form-margin-bottom-value" type="number")
+      br
+      input(id="form-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+      | Внешний отступ слева:
+      br
+      input(id="form-margin-left-value" type="number")
+      br
+      input(id="form-margin-left-value-range" type="range" min="0" max="100" step="1")
+      | Внешний отступ справа:
+      br
+      input(id="form-margin-right-value" type="number")
+      br
+      input(id="form-margin-right-value-range" type="range" min="0" max="100" step="1")
+      hr
+    h4
+      div(id="formVerticalIndicator" class="group")
+        | ВЕРТИКАЛЬ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    br
+    div(id="form-show-vertical-settings")
+      | Верх
+      input(id="formMarginTop" name="vertical" type="radio" value="up")
+      br
+      | Центр
+      input(id="formMarginCenter" name="vertical" type="radio" value="center")
+      br
+      | Низ
+      input(id="formMarginBottom" name="vertical" type="radio" value="down")
+      br
+      hr
+    h4
+      div(id="formTextShadowIndicator" class="group")
+        | ТЕНИ ТЕКСТА
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-text-shadow-settings")
+      br
+      | Вкл
+      input(id="formTextShadowRadioOn" type="radio" name="textShadow")
+      | Выкл
+      input(id="formTextShadowRadioOff" type="radio" name="textShadow" checked)
+      div(id="form-text-shadow")
+        div(id="form-text-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="form-text-shadow-color-value")
+        div(id="form-text-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="form-text-shadow-vertical-value")
+            input(type="range" id="form-text-shadow-vertical-value-range" step="1" min="-20" max="20")
+        div(id="form-text-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="form-text-shadow-horizontal-value")
+            input(type="range" id="form-text-shadow-horizontal-value-range" step="1" min="-20" max="20")        
+        div(id="form-text-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="form-text-shadow-blur-value")
+            input(type="range" id="form-text-shadow-blur-value-range" step="1" min="0" max="20")
+        div(id="form-text-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="form-text-shadow-opacity-value")
+            input(type="range" id="form-text-shadow-opacity-value-range" step="1" min="0" max="100")
+      hr
+    br
+    h4
+      div(id="formShadowIndicator" class="group")
+        | ТЕНИ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-shadow-settings")
+      br
+      | Вкл
+      input(id="formShadowRadioOn" type="radio" name="form_shadow")
+      | Выкл
+      input(id="formShadowRadioOff" type="radio" name="form_shadow" checked)
+      div(id="form-shadow")
+        div(id="form-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="form-shadow-color-value")
+        div(id="form-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="form-shadow-vertical-value")
+            input(type="range" id="form-shadow-vertical-value-range" step="1" min="-200" max="200")
+        div(id="form-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="form-shadow-horizontal-value")
+            input(type="range" id="form-shadow-horizontal-value-range" step="1" min="-200" max="200")
+        div(id="form-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="form-shadow-blur-value")
+            input(type="range" id="form-shadow-blur-value-range" step="1" min="0" max="200")
+        div(id="form-shadow-spread" style="text-align: center")
+          div
+            | Размах:
+            br
+            input(type="number" value="0" id="form-shadow-spread-value")
+            input(type="range" id="form-shadow-spread-value-range" step="1" min="-200" max="200")
+        div(id="form-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="form-shadow-opacity-value")
+            input(type="range" id="form-shadow-opacity-value-range" step="1" min="0" max="100")
+        div(id="form-shadow-inset" style="text-align: center")
+          div
+            | Внутренняя тень:
+            input(type="checkbox" id="form-shadow-inset-value")
+      hr
+    br
+    h4
+      div(id="formInputsIndicator" class="group")
+        | НАСТРОЙКИ ПОЛЕЙ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-inputs-settings")
+      br
+      h4
+        div(id="formAddDeleteIndicator" class="group")
+          | &#8195;
+          | Поля
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="form-show-add-delete-settings")
+        br
+        div
+          | &#8195;
+          | Добавить поле:
+          br
+          | &#8195;
+          select(id="inputerAdd")
+            option(value="")
+        br
+        div
+          | &#8195;
+          | Удалить: поле
+          br
+          | &#8195;
+          select(id="inputerDelete")
+            option(value="")
+        hr
+      br
+      h4
+        div(id="formInputsFontIndicator" class="group")
+          | &#8195;
+          | Шрифт
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="form-show-inputs-font-settings")
+        br
+        div
+          | &#8195;
+          | Выбор шрифта:
+          br
+          | &ensp;
+          input(type="checkbox" id="formInputBold")
+          | Bold
+          br
+          | &#8195;
+          select(id="formInputFontFamilySelect")
+            option(value="Tahoma, Arial, Verdana")  Tahoma
+            option(value="Arial, Tahoma, Verdana") Arial
+            option(value="Verdana, Tahoma, Arial") Verdana
+            option(value="Georgia, Tahoma, Arial")  Georgia
+            option(value="Montserrat, Arial, Verdana")  Montserrat Black
+            option(value="Roboto, Arial, Tahoma")  Roboto Black
+        div(id="formInput-font-size")
+          | &#8195;
+          | Размер шрифта:
+          br
+          | &#8195;
+          input(id="formInput-font-size-value" type="number")
+          br
+          | &ensp;
+          input(id="formInput-font-size-value-range" type="range" min="1" max="100" step="1")           
+        div
+          | &ensp;
+          | Цвет текста:
+          input(type="color" value="0" id="formInput-color-value")      
+        hr
+      br
+      h4
+        div(id="formInputsBackgroundIndicator" class="group")
+          | &#8195;
+          | Цвет полей
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="formInput-background-types")
+        br
+        div
+          | &#8195;
+          | Заливка
+          input(type="radio" value="color" name="color" id="formInputBackgroundRadioColor" checked)
+          | Градиент
+          input(type="radio" value="gradient" name="color" id="formInputBackgroundRadioGradient")
+        div(id="formInputBackgroundColor")
+          div
+            | &#8195;
+            | Цвет:
+            input(id="formInput-main-color" type="color")
+          br
+          div
+            | &#8195;
+            | Непрозрачность:
+            br
+            | &#8195;
+            input(id="formInput-main-color-opacity" type="number" value="100")
+        div(id="formInputBackgroundGradient")
+          div
+            | &#8195;
+            | Цвет 1:
+            input(id="formInput-gradient-color-1" type="color")
+          br
+          div
+            | &#8195;
+            | Цвет 2:
+            input(id="formInput-gradient-color-2" type="color")
+          br
+          div
+            | &#8195;
+            | Угол:
+            br
+            | &#8195;
+            input(id="formInput-gradient-angle" type="number" value="0")
+        hr
+      br
+      h4
+        div(id="formInputsSizeIndicator" class="group")
+          | &#8195;
+          | Размер полей
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="formInput-height")
+        br
+        div
+          | &#8195;
+          | Высота полей:
+          br
+          | &#8195;
+          input(type="checkbox" id="formInputAutoHeight")
+          | Автовысота
+          br
+          | &#8195;
+          input(type="number" value="0" id="formInput-height-value")
+          br
+          | &#8195;
+          input(type="range" id="formInput-height-value-range" step="1" min="0" max="600")
+        div
+          | &#8195;
+          | Ширина полей:
+          br
+          | &#8195;
+          input(type="checkbox" id="formInputAutoWidth")
+          | На всю ширину
+          br
+          | &#8195;
+          input(type="number" value="0" id="formInput-width-value")
+          br
+          | &#8195;
+          input(type="range" id="formInput-width-value-range" step="1" min="0" max="600")
+        hr
+      br
+      h4
+        div(id="formInputsBorderIndicator" class="group")
+          | &#8195;
+          | Границы полей
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="form-show-inputs-border-settings")
+        br
+        | &#8195;
+        | Все границы
+        input(id="formInputBorderRadioAll" name="formInput_Border" type="radio" value="all" checked)
+        br
+        | &#8195;
+        | Каждая граница
+        input(id="formInputBorderRadioEvery" name="formInput_Border" type="radio" value="each")
+        br
+        br
+        div(id="formInputBorderAll")
+          | &#8195;
+          | Цвет границы:
+          input(id="formInput-border-color-value" type="color")
+          br
+          | &#8195;
+          | Толщина границы:
+          br
+          | &#8195;
+          input(id="formInput-border-value" type="number")
+          br
+          | &#8195;
+          input(id="formInput-border-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление углов:
+          br
+          | &#8195;
+          input(id="formInput-border-radius" type="number")
+          br
+          | &#8195;
+          input(id="formInput-border-radius-range" type="range" min="0" max="100" step="1")
+          br
+          | &#8195;
+          | Стиль границы:
+          br
+          | &#8195;
+          select(id="formInput-border-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+
+        div(id="formInputBorderEvery")
+          | &#8195;
+          | Цвет верхней границы:
+          input(id="formInput-border-top-color" type="color")
+          br
+          | &#8195;
+          | Толщина верхней границы:
+          br
+          | &#8195;
+          input(id="formInput-border-top-value" type="number")
+          br
+          input(id="formInput-border-top-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление верхнего левого края:
+          br
+          | &#8195;
+          input(id="formInput-border-left-top-radius" type="number")
+          br
+          input(id="formInput-border-left-top-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль верхней границы:
+          br
+          | &#8195;
+          select(id="formInput-border-top-style-value")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          br
+          | &#8195;
+          | Цвет правой границы:
+          input(id="formInput-border-right-color" type="color")
+          br
+          | &#8195;
+          | Толщина правой границы:
+          br
+          | &#8195;
+          input(id="formInput-border-right-value" type="number")
+          br
+          input(id="formInput-border-right-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление правого верхнего угла:
+          br
+          | &#8195;
+          input(id="formInput-border-right-radius" type="number")
+          br
+          input(id="formInput-border-right-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль правой границы:
+          br
+          | &#8195;
+          select(id="formInput-border-right-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          br
+          | &#8195;
+          | Цвет нижней границы:
+          input(id="formInput-border-bottom-color" type="color")
+          br
+          | &#8195;
+          | Толщина нижней границы:
+          br
+          | &#8195;
+          input(id="formInput-border-bottom-value" type="number")
+          br
+          input(id="formInput-border-bottom-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление правого нижнего угла:
+          br
+          | &#8195;
+          input(id="formInput-border-bottom-right-radius" type="number")
+          br
+          input(id="formInput-border-bottom-right-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль нижней границы:
+          br
+          | &#8195;
+          select(id="formInput-border-bottom-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          | &#8195;
+          | Цвет левой границы:
+          input(id="formInput-border-left-color" type="color")
+          br
+          | &#8195;
+          | Толщина левой границы:
+          br
+          | &#8195;
+          input(id="formInput-border-left-value" type="number")
+          br
+          input(id="formInput-border-left-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление левого нижнего угла:
+          br
+          | &#8195;
+          input(id="formInput-border-bottom-left-radius" type="number")
+          br
+          input(id="formInput-border-bottom-left-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль левой границы:
+          br
+          | &#8195;
+          select(id="formInput-border-left-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+        hr
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    br
+    h4
+      div(id="formSubmitIndicator" class="group")
+        | НАСТРОЙКИ КНОПКИ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-submit-settings")
+      br
+      h4
+        div(id="formSubmitMarginIndicator" class="group")
+          | &#8195;
+          | Внешние отступы
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="formSubmitMarginEvery")
+        br
+        | &#8195;
+        | Внешний отступ сверху:
+        br
+        | &#8195;
+        input(id="formSubmit-margin-top-value" type="number")
+        br
+        input(id="formSubmit-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ снизу:
+        br
+        | &#8195;
+        input(id="formSubmit-margin-bottom-value" type="number")
+        br
+        input(id="formSubmit-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ слева:
+        br
+        | &#8195;
+        input(id="formSubmit-margin-left-value" type="number")
+        br
+        input(id="formSubmit-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ справа:
+        br
+        | &#8195;
+        input(id="formSubmit-margin-right-value" type="number")
+        br
+        input(id="formSubmit-margin-right-value-range" type="range" min="0" max="100" step="1")
+        hr
+      br
+      h4
+        div(id="formSubmitFontIndicator" class="group")
+          | &#8195;
+          | Шрифт
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="form-show-submit-font-settings")
+        br
+        div
+          | &#8195;
+          | Выбор шрифта:
+          br
+          | &#8195;
+          input(type="checkbox" id="formSubmitBold")
+          | &ensp; Bold
+          br
+          | &#8195;
+          select(id="formSubmitFontFamilySelect")
+            option(value="Tahoma, Arial, Verdana")  Tahoma
+            option(value="Arial, Tahoma, Verdana") Arial
+            option(value="Verdana, Tahoma, Arial") Verdana
+            option(value="Georgia, Tahoma, Arial")  Georgia
+            option(value="Montserrat, Arial, Verdana")  Montserrat Black
+            option(value="Roboto, Arial, Tahoma")  Roboto Black
+        div(id="formSubmit-font-size")
+          | &#8195;
+          | Размер шрифта:
+          br
+          | &#8195;
+          input(id="formSubmit-font-size-value" type="number")
+          br
+          input(id="formSubmit-font-size-value-range" type="range" min="1" max="100" step="1")           
+        div
+          | &#8195;
+          | Цвет текста:
+          input(type="color" value="0" id="formSubmit-color-value")      
+        hr
+      br
+      h4
+        div(id="formSubmitBackgroundIndicator" class="group")
+          | &#8195;
+          | Цвет кнопки
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="formSubmit-background-types")
+        br
+        div
+          | &#8195;
+          | Заливка
+          input(type="radio" value="color" name="color" id="formSubmitBackgroundRadioColor" checked)
+          | Градиент
+          input(type="radio" value="gradient" name="color" id="formSubmitBackgroundRadioGradient")
+        div(id="formSubmitBackgroundColor")
+          div
+            | &#8195;
+            | Цвет:
+            input(id="formSubmit-main-color" type="color")
+          br
+          div
+            | &#8195;
+            | Непрозрачность:
+            br
+            | &#8195;
+            input(id="formSubmit-main-color-opacity" type="number" value="100")
+        div(id="formSubmitBackgroundGradient" style="text-align: center;")
+          div
+            | &#8195;
+            | Цвет 1:
+            input(id="formSubmit-gradient-color-1" type="color")
+          br
+          div
+            | &#8195;
+            | Цвет 2:
+            input(id="formSubmit-gradient-color-2" type="color")
+          br
+          div
+            | &#8195;
+            | Угол:
+            br
+            | &#8195;
+            input(id="formSubmit-gradient-angle" type="number" value="0")
+        hr
+      br
+      h4
+        div(id="formSubmitSizeIndicator" class="group")
+          | &#8195;
+          | Размер полей
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="formSubmit-height")
+        br
+        div
+          | &#8195;
+          | Высота кнопки:
+          br
+          | &#8195;
+          input(type="checkbox" id="formSubmitAutoHeight")
+          | Автовысота
+          br
+          | &#8195;
+          input(type="number" value="0" id="formSubmit-height-value")
+          br
+          input(type="range" id="formSubmit-height-value-range" step="1" min="0" max="600")
+        div
+          | &#8195;
+          | Ширина кнопки:
+          br
+          | &#8195;
+          input(type="checkbox" id="formSubmitAutoWidth")
+          | На всю ширину
+          br
+          | &#8195;
+          input(type="number" value="0" id="formSubmit-width-value")
+          br
+          input(type="range" id="formSubmit-width-value-range" step="1" min="0" max="600")
+        hr
+      br
+      h4
+        div(id="formSubmitBorderIndicator" class="group")
+          | &#8195;
+          | Границы кнопки
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="form-show-submit-border-settings")
+        br
+        | &#8195;
+        | Все границы
+        input(id="formSubmitBorderRadioAll" name="formSubmit_Border" type="radio" value="all" checked)
+        br
+        | &#8195;
+        | Каждая граница
+        input(id="formSubmitBorderRadioEvery" name="formSubmit_Border" type="radio" value="each")
+        br
+        br
+        div(id="formSubmitBorderAll")
+          | &#8195;
+          | Цвет границы:
+          input(id="formSubmit-border-color-value" type="color")
+          br
+          | &#8195;
+          | Толщина границы:
+          br
+          | &#8195;
+          input(id="formSubmit-border-value" type="number")
+          br
+          input(id="formSubmit-border-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление углов:
+          br
+          | &#8195;
+          input(id="formSubmit-border-radius" type="number")
+          br
+          input(id="formSubmit-border-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль границы:
+          br
+          | &#8195;
+          select(id="formSubmit-border-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+
+
+        div(id="formSubmitBorderEvery")
+          | &#8195;
+          | Цвет верхней границы:
+          input(id="formSubmit-border-top-color" type="color")
+          br
+          | &#8195;
+          | Толщина верхней границы:
+          br
+          | &#8195;
+          input(id="formSubmit-border-top-value" type="number")
+          br
+          input(id="formSubmit-border-top-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление верхнего левого края:
+          br
+          | &#8195;
+          input(id="formSubmit-border-left-top-radius" type="number")
+          br
+          input(id="formSubmit-border-left-top-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль верхней границы:
+          br
+          | &#8195;
+          select(id="formSubmit-border-top-style-value")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          br
+          | &#8195;
+          | Цвет правой границы:
+          input(id="formSubmit-border-right-color" type="color")
+          br
+          | &#8195;
+          | Толщина правой границы:
+          br
+          | &#8195;
+          input(id="formSubmit-border-right-value" type="number")
+          br
+          input(id="formSubmit-border-right-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление правого верхнего угла:
+          br
+          | &#8195;
+          input(id="formSubmit-border-right-radius" type="number")
+          br
+          input(id="formSubmit-border-right-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль правой границы:
+          br
+          | &#8195;
+          select(id="formSubmit-border-right-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          br
+          | &#8195;
+          | Цвет нижней границы:
+          input(id="formSubmit-border-bottom-color" type="color")
+          br
+          | &#8195;
+          | Толщина нижней границы:
+          br
+          | &#8195;
+          input(id="formSubmit-border-bottom-value" type="number")
+          br
+          input(id="formSubmit-border-bottom-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление правого нижнего угла:
+          br
+          | &#8195;
+          input(id="formSubmit-border-bottom-right-radius" type="number")
+          br
+          input(id="formSubmit-border-bottom-right-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль нижней границы:
+          br
+          | &#8195;
+          select(id="formSubmit-border-bottom-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+          | &#8195;
+          | Цвет левой границы:
+          input(id="formSubmit-border-left-color" type="color")
+          br
+          | &#8195;
+          | Толщина левой границы:
+          br
+          | &#8195;
+          input(id="formSubmit-border-left-value" type="number")
+          br
+          input(id="formSubmit-border-left-value-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Закругление левого нижнего угла:
+          br
+          | &#8195;
+          input(id="formSubmit-border-bottom-left-radius" type="number")
+          br
+          input(id="formSubmit-border-bottom-left-radius-range" type="range" min="0" max="100" step="1")
+          | &#8195;
+          | Стиль левой границы:
+          br
+          | &#8195;
+          select(id="formSubmit-border-left-style")
+            option(value="none")  нет границы
+            option(value="solid") solid
+            option(value="dashed")  dashed
+            option(value="dotted")  dotted
+            option(value="double")  double
+          br
+      hr
+    br
+    h4
+      div(id="formAnimationIndicator" class="group")
+        | АНИМАЦИЯ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-animation" style="text-align:center")
+      div(id="form-animation-type")
+        div
+          br
+          | Тип анимации:
+          br
+          select(id="form-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+      div(id="form-animation-delay")
+        div
+          | Задержка анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="form-animation-delay-value")
+          br
+          input(type="range" id="form-animation-delay-value-range" step="1" min="0" max="20")
+        
+      
+      div(id="form-animation-duration")
+        div
+          | Длительность анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="form-animation-duration-value")
+          br
+          input(type="range" id="form-animation-duration-value-range" step="1" min="0" max="20")    
+      hr
+    br
+    h4
+      div(id="formTimeoutIndicator" class="group")
+        | СКРЫТИЕ БЛОКА
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="form-show-timeout-settings" style="text-align: center;")
+      div(id="form-display-none")
+        div
+          br
+          input(type="checkbox" id="form-display-none-value")
+      div(id="form-timeout")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="form-timeout-hour-value")
+          br
+          input(type="range" id="form-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="form-timeout-minute-value")
+          br
+          input(type="range" id="form-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="form-timeout-second-value")
+          br
+          input(type="range" id="form-timeout-second-value-range" step="1" min="0" max="60")

@@ -1,0 +1,167 @@
+div(id="settings-mn")
+  h1  Настройки
+  div(id="settings-mn-body")
+    div(class="settings-mn-body-seo")
+      hr
+      center
+        b Настройки SEO
+      hr
+      div(id="page-title" style="text-align: center;")
+        div
+          | Заголовок страницы:
+          br
+          input(type="text")
+      div(id="page-meta-description" style="text-align: center;")
+        div
+        | Мета-description:
+        br
+        input(type="text")
+      div(id="page-meta-keywords" style="text-align: center;")
+        div 
+          | Мета-keywords:
+          br
+          input(type="text")
+    hr
+    div(class="settings-mn-body-ms")
+      center 
+        b Основные настройки страницы
+      hr
+      div(id="page-width" style="text-align: center;")
+        div
+          | Ширина страницы:
+          br
+          br
+          input(type="checkbox" id="pageFullScreen")
+          | &nbsp;
+          | На весь экран
+          br
+          br
+          input(id="page-width-input" type="number")
+    hr
+    div(class="settings-mn-body-style")
+      center 
+        b  Настройки стилей страницы
+      hr
+      div(id="page-background-types" style="text-align: center;")
+        div 
+          | Цвет 
+          input(type="radio" value="color" name="background-type" checked="")
+        div 
+          | Градиент
+          input(type="radio" value="gradient" name="background-type")
+        div
+          | Изображение
+          input(type="radio" value="bgimage" name="background-type")
+        div
+          | Видео
+          input(type="radio" value="video" name="background-type")
+      br
+      div(class="page-background-color-settings" style="")
+        div(id="page-background-color" style="text-align: center;")
+          div
+            | Фон страницы:
+            br
+            input(id="page-main-color" type="color")
+          br
+          div
+            | Непрозрачность:
+            br
+            input(id="page-main-color-opacity" type="number" value="100")
+      br  
+      div(class="page-background-gradient-settings" style="display: none")
+        div(id="page-background-gradient" style="text-align: center;")
+          div 
+            | Цвет 1:
+            br
+            input(id="gradient-color-1" type="color")
+          br
+          div
+            | Цвет 2:
+            br
+            input(id="gradient-color-2" type="color")
+          br
+          div
+            | Угол:
+            br
+            input(id="gradient-angle" type="number" value="0")
+      br
+      div(class="page-background-image-settings" style="display: none")
+        div(id="page-background-image" style="text-align: center;")
+          div
+            | Фоновое изображение:
+            div(style="display: flex; justify-content: center;")
+              input(id="page-background-image-file" type="file")
+          br
+          div
+            | Размер фонового изображения:
+            br
+            select(id="page-background-image-size")
+              option(value="contain") Contain
+              option(value="cover") Cover
+          br
+          div
+            | Фиксация фонового изображения:
+            br
+            select(id="page-background-image-attachment")
+              option(value="scroll")  Scroll
+              option(value="fixed") Fixed
+            
+          br
+          div
+            | Цвет:
+            br
+            input(id="page-background-image-color" type="color")
+          br
+          div
+            | Смешивание фонового изображения:
+            br
+            select(id="page-background-image-blend-mode")
+              option(value="unset") БЕЗ СМЕШИВАНИЯ
+              option(value="color") color
+              option(value="color-burn")  color-burn
+              option(value="color-dodge") color-dodge
+              option(value="darken")  darken
+              option(value="difference")  difference
+              option(value="exclusion") exclusion
+              option(value="hard-kight")  hard-light
+              option(value="hue") hue
+              option(value="lighten") lighten
+              option(value="luminosity")  luminosity
+              option(value="multiply")  multiply
+              option(value="normal")  normal
+              option(value="overlay") overlay
+              option(value="saturation")  saturation
+              option(value="screen")  screen
+              option(value="soft-light")  soft-light
+          br
+          div
+            | Повторять по вертикали:
+            br
+            select(id="page-background-image-repeat-y")
+              option(value="no-repeat") Не повторять
+              option(value="repeat")  Повторять
+            
+          br
+          div
+            | Повторять по горизонтали:
+            br
+            select(id="page-background-image-repeat-x")
+              option(value="no-repeat") Не повторять
+              option(value="repeat")  Повторять
+      br
+      div(class="page-background-video-settings" style="display: none")
+        div(id="page-background-video" style="text-align: center;")
+          div
+            | Ссылка:
+            br
+            input(id="videolink" type="text")
+          br
+          div
+            | Зациклить:
+            br
+            input(id="video_loop" value="1" type="checkbox")
+          br
+          div
+            | Включить звук:
+            br
+            input(id="video_unmute" value="1" type="checkbox")

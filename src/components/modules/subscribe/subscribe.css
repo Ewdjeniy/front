@@ -1,0 +1,208 @@
+.subscribeBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: auto !important;
+  margin: 24px 10px;
+}
+
+.subscribeWrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  border: 2px solid transparent;
+  min-width: 120px;
+}
+
+.subscribeWrapper:hover {
+  .subscribe_settings {
+    opacity: 1;
+    transition: all 0.4s linear;
+  }
+}
+
+.subscribe {
+  width: 100%;
+  height: 100%;
+}
+
+.subscribeForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formCodeWrapper {
+  width: 100%;
+  height: 100%
+}
+
+.subscribeInput {
+  width: 100%;
+  padding-left: 1rem;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(222, 220, 220, 1);
+  font-family: Arial, Tahoma, Verdana;
+  font-size: 1.7rem;
+  height: 4.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  cursor: grab;
+}
+
+.subscribeSubmit {
+  width: 100%;
+  background: #FFB600;
+  border-radius: 5px;
+  border: 1px solid #C18700;
+  font-family: Roboto, Arial, Tahoma;
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  overflow-wrap: break-word;
+}
+
+.blue-background-class {
+  border: 1px dashed blue !important;
+  background: rgba(156, 209, 240, 0.9) !important;
+}
+
+#subscribe-settings {
+  padding-bottom: 10rem;
+}
+
+#deliveryCodeArea {
+  width: 100%;
+  height: 200px;
+}
+
+.fieldPlaceholder {
+  width: 90%;
+}
+
+.fieldNameSelect {
+  width: 100%;
+}
+
+#formMethod {
+  width: 100%;
+}
+
+#formAction {
+  width: 100%;
+}
+
+#newField {
+  width: 100%;
+}
+
+.extraFieldPlaceholder {
+  width: 100%;
+}
+
+#submitEditor {
+  width: 100%;
+}
+
+#changeSubmitValue {
+  width: 100%;
+  background: grey;
+  border: 0;
+}
+
+#submitValue {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+.submitValue {
+  display: flex;
+  span {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+
+#subscribeSubmitBackgroundGradient,
+#subscribeSubmitBorderEvery,
+#subscribeInputBackgroundGradient,
+#subscribeInputBorderEvery,
+#subscribe-text-shadow,
+#subscribe-shadow,
+#subscribeMarginEvery,
+#subscribe-shadow-settings,
+#subscribe-inputs-settings,
+#subscribe-submit-settings,
+#subscribe-show-vertical-settings,
+#subscribe-show-add-delete-settings,
+#subscribe-show-inputs-font-settings,
+#subscribeInput-background-types,
+#subscribeInput-height,
+#subscribe-show-inputs-border-settings,
+#subscribeSubmitMarginEvery,
+#subscribe-show-submit-font-settings,
+#subscribeSubmit-background-types,
+#subscribeSubmit-height,
+#subscribe-show-submit-border-settings,
+#subscribe-animation,
+#subscribe-show-timeout-settings,
+#show-subscribe-code-settings,
+#show-subscribe-input-space-settings,
+#subscribe-submit-text-shadow-settings,
+#subscribe-submit-text-shadow,
+#subscribeInput-text-shadow,
+#subscribeInput-text-shadow-settings,
+#subscribe-submit-editor-settings,
+.extraFieldsSettings {
+  display: none;
+}
+
+#subscribeMarginGroupIndicator,
+#subscribeSubmitTextShadowIndicator,
+#subscribeInputTextShadowIndicator,
+#subscribeShadowIndicator,
+#subscribeInputsIndicator,
+#subscribeSubmitIndicator,
+#subscribeVerticalIndicator,
+#subscribeAddDeleteIndicator,
+#subscribeInputsFontIndicator,
+#subscribeInputsBackgroundIndicator,
+#subscribeInputsSizeIndicator,
+#subscribeInputsBorderIndicator,
+#subscribeSubmitMarginIndicator,
+#subscribeSubmitFontIndicator,
+#subscribeSubmitBackgroundIndicator,
+#subscribeSubmitSizeIndicator,
+#subscribeSubmitBorderIndicator,
+#subscribeAnimationIndicator,
+#subscribeTimeoutIndicator,
+#subscribeCodeIndicator,
+#subscribeInputSpaceIndicator,
+#subscribeSubmitEditorIndicator {
+  cursor: pointer;
+  user-select: none;
+  span {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+#testSubscribe {
+  display: none;
+}
+
+.deliveryCode {
+  display: none;
+}

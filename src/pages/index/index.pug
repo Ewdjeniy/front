@@ -1,0 +1,132 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title DF - Digital Funnel
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    //Google шрифты, подключение
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:900|Roboto:900|Tangerine&display=swap" rel="stylesheet")
+    //link(href="noty/lib/noty.css" rel="stylesheet" type="text/css")
+    //link(href="noty/lib/themes/mint.css" rel="stylesheet" type="text/css")
+    //script(type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
+    //script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  body
+    input(type="hidden" id="serverInputFunnelId" value="test")
+    input(type="hidden" id="serverInputFunnelStepId" value="testStep")
+    div(id="hiddenDiv")
+    a(id="previewDigital" href="preview.html" target="_blank") Предпросмотр
+    input(type="hidden" name="_token" value="TEEKMDeKm9DUyI6tpt9ZBNffGbsmdAOML6POCsCE")
+    input(type="hidden" name="template_id" value="3")
+    div(id="backgroundVideo")
+    div(id="editorArea")
+      div(id="leftSidebar")
+        div(class="ls-header")
+          span(class="logo")  DF
+        div(class="ls-left-panel")
+          div(class="row")
+            div(class="col-md-12 main-settings")
+              span(class="glyphicon glyphicon-cog")
+          div(class="row")
+            div(class="col-md-12")
+              span(class="glyphicon glyphicon-eye-close")          
+          div(class="row")
+            div(class="col-md-12")
+              span(class="glyphicon glyphicon-eye-close")
+          div(class="row")
+            div(class="col-md-12")
+              span(class="glyphicon glyphicon-eye-close")
+          div(class="row")
+            div(class="col-md-12 hide-panel")
+              span(class="glyphicon glyphicon-arrow-left")
+        div(class="ls-center-area")
+          //Основные группы элементов
+          div(id="elements")
+            div(class="row ls-elements-row")
+              div(class="col-md-6 ls-elements-col main-selectors")
+                span  main
+              div(class="col-md-6 ls-elements-col content-selectors")
+                span  content
+            div(class="row ls-elements-row")
+              div(class="col-md-6 ls-elements-col modules")
+                span  modules
+          //Основные селекторы
+          div(id="mainSelector")
+            div(class="main-module row" id="main-selector-1")
+              div(class="col-md-12")
+            div(class="main-module row" id="main-selector-2")
+              div(class="col-md-6")
+              div(class="col-md-6")
+            div(class="main-module row" id="main-selector-3")
+              div(class="col-md-4")
+              div(class="col-md-4")
+              div(class="col-md-4")
+            div(class="main-module row" id="main-selector-4")
+              div(class="col-md-3")
+              div(class="col-md-3")
+              div(class="col-md-3")
+              div(class="col-md-3")
+            div(class="ls-back-btn")
+              span(class="glyphicon glyphicon-arrow-left")
+          //Контентовые селекторы
+          div(id="contentSelector")
+            div(class="content-module row" id="content-selector-1")
+              div(class="col-md-12")
+            div(class="content-module row" id="content-selector-2")
+              div(class="col-md-6")
+              div(class="col-md-6")
+            div(class="content-module row" id="content-selector-3")
+              div(class="col-md-4")
+              div(class="col-md-4")
+              div(class="col-md-4")
+            div(class="content-module row" id="content-selector-4")
+              div(class="col-md-3")
+              div(class="col-md-3")
+              div(class="col-md-3")
+              div(class="col-md-3")
+            div(class="ls-back-btn")
+              span(class="glyphicon glyphicon-arrow-left")
+          //Модули
+          div(id="Modules")
+            div(class="row module" id="line")
+              span  Line
+            div(class="row module" id="list")
+              span  List
+            div(class="row module" id="button")
+              span  Button
+            div(class="row module" id="subscribeForm")
+              span  Subscribe
+            div(class="row module" id="text")
+              span  Text
+            div(class="row module" id="image")
+              span  Image
+            div(class="row module" id="video")
+              span  Video
+            div(class="row module" id="payForm")
+              span  Form
+            div(class="ls-back-btn")
+              span(class="glyphicon glyphicon-arrow-left")
+      //Основная зона
+      div(id="mainArea" class="container-fluid")
+      style(id="mediaStyle").
+        #mainArea {
+          width: 750px;
+        }
+      //Правое меню
+      div(id="rightSidebar")
+        span(class="glyphicon glyphicon-remove close-rs")
+        include ../../components/page/page.pug
+        include ../../components/main_selector/main_selector.pug
+        include ../../components/content_selector/content_selector.pug
+        include ../../components/modules/image/image.pug
+        include ../../components/modules/line/line.pug
+        include ../../components/modules/list/list.pug
+        include ../../components/modules/form/form.pug
+        include ../../components/modules/subscribe/subscribe.pug
+        include ../../components/modules/text/text.pug
+        include ../../components/modules/video/video.pug
+        include ../../components/modules/button/button.pug

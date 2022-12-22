@@ -1,0 +1,382 @@
+section(id="video-settings")
+  h1  Настройки
+  form(name="videoFile" method="post" enctype="multipart/form-data")
+    br
+    div 
+      | Текущее видео:
+      div(id="videoIndicator")  Отсутствует
+    br
+    div 
+      | Выбор типа видео:
+      br
+      select(id="videoSrc")
+        option(value="youtube") YouTube
+        option(value="vimeo") Vimeo
+        option(value="embed") Embed code
+      br
+      br
+      div(id="youtube")
+        | YouTube Video URL:
+        br
+        input(type="url" id="youtubeInput" placeholder="https://youtube.com/545")
+      div(id="vimeo")
+        | Vimeo Video URL:
+        br
+        input(type="url" id="vimeoInput" placeholder="http://vimeo.com/124")
+      div(id="embedCode")
+        | Embed Code:
+        br
+        textarea(id="embedArea")
+    br
+    input(type="button" id="videoUrlExec" value="Добавить")
+    hr
+    div(id="videoAutoplay")
+      input(type="checkbox" id="videoAutoplayCheckBox")
+      | Автовоспроизведение
+    
+      hr
+    div(id="videoControls")
+      input(type="checkbox" id="videoControlsCheckBox")
+      | Cкрыть панель управления
+      hr
+    div
+      | Внешний отступ:
+      br
+      br
+      div(id="videoMarginEvery")
+        | Внешний отступ сверху:
+        br
+        input(id="video-margin-top-value" type="number")
+        br
+        input(id="video-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ снизу:
+        br
+        input(id="video-margin-bottom-value" type="number")
+        br
+        input(id="video-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ слева:
+        br
+        input(id="video-margin-left-value" type="number")
+        br
+        input(id="video-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ справа:
+        br
+        input(id="video-margin-right-value" type="number")
+        br
+        input(id="video-margin-right-value-range" type="range" min="0" max="100" step="1")
+      
+    
+    hr
+    div 
+      | Вертикальное выравнивание:
+      br
+      | Верх
+      input(id="videoMarginTop" name="vertical" type="radio" value="up")
+      br
+      | Центр
+      input(id="videoMarginCenter" name="vertical" type="radio" value="center")
+      br
+      | Низ
+      input(id="videoMarginBottom" name="vertical" type="radio" value="down")
+      br
+    
+    hr
+    div
+      | Граница изображения:
+      br
+      | Все границы
+      input(id="videoBorderRadioAll" name="video_Border" type="radio" value="all" checked)
+      br
+      | Каждая граница
+      input(id="videoBorderRadioEvery" name="video_Border" type="radio" value="each")
+      br
+      br
+      div(id="videoBorderAll")
+        | Цвет границы:
+        br
+        input(id="video-border-color-value" type="color")
+        br
+        | Толщина границы:
+        br
+        input(id="video-border-value" type="number")
+        br
+        input(id="video-border-value-range" type="range" min="0" max="100" step="1")
+        br
+        | Стиль границы:
+        br
+        select(id="video-border-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+      div(id="videoBorderEvery")
+        | Цвет верхней границы:
+        br
+        input(id="video-border-top-color" type="color")
+        br
+        | Толщина верхней границы:
+        br
+        input(id="video-border-top-value" type="number")
+        br
+        input(id="video-border-top-value-range" type="range" min="0" max="100" step="1")
+        br
+        | Стиль верхней границы:
+        br
+        select(id="video-border-top-style-value")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет правой границы:
+        br
+        input(id="video-border-right-color" type="color")
+        br
+        | Толщина правой границы:
+        br
+        input(id="video-border-right-value" type="number")
+        br
+        input(id="video-border-right-value-range" type="range" min="0" max="100" step="1")
+        br
+        | Стиль правой границы:
+        br
+        select(id="video-border-right-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет нижней границы:
+        br
+        input(id="video-border-bottom-color" type="color")
+        br
+        | Толщина нижней границы:
+        br
+        input(id="video-border-bottom-value" type="number")
+        br
+        input(id="video-border-bottom-value-range" type="range" min="0" max="100" step="1")
+        br
+        | Стиль нижней границы:
+        br
+        select(id="video-border-bottom-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        | Цвет левой границы:
+        br
+        br
+        input(id="video-border-left-color" type="color")
+        br
+        | Толщина левой границы:
+        br
+        input(id="video-border-left-value" type="number")
+        br
+        input(id="video-border-left-value-range" type="range" min="0" max="100" step="1")
+        br
+        | Стиль левой границы:
+        br
+        select(id="video-border-left-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+    br
+    hr
+    div(id="video-shadow-settings")
+      label(style="text-align:center")  Тени
+      br
+      | Вкл
+      input(id="videoShadowRadioOn" name="shadow" type="radio" value="1")
+      | Выкл
+      input(id="videoShadowRadioOff" name="shadow" type="radio" value="0" checked)
+      div(id="video-shadow")
+        div(id="video-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="video-shadow-color-value")
+          
+        
+        div(id="video-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="video-shadow-vertical-value")
+            input(type="range" id="video-shadow-vertical-value-range" step="1" min="-200" max="200")
+        div(id="video-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="video-shadow-horizontal-value")
+            input(type="range" id="video-shadow-horizontal-value-range" step="1" min="-200" max="200")        
+        div(id="video-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="video-shadow-blur-value")
+            input(type="range" id="video-shadow-blur-value-range" step="1" min="0" max="200")
+        div(id="video-shadow-spread" style="text-align: center")
+          div
+            | Размах:
+            br
+            input(type="number" value="0" id="video-shadow-spread-value")
+            input(type="range" id="video-shadow-spread-value-range" step="1" min="-200" max="200")
+        div(id="video-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="video-shadow-opacity-value")
+            input(type="range" id="video-shadow-opacity-value-range" step="1" min="0" max="100")
+        div(id="video-shadow-inset" style="text-align: center")
+          div
+            | Внутренняя тень:
+            input(type="checkbox" id="video-shadow-inset-value")
+    hr
+    div(id="video-animation" style="text-align:center")
+      div(id="video-animation-type")
+        div
+          | Тип анимации:
+          br
+          select(id="video-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+      div(id="video-animation-delay")
+        div
+          | Задержка анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="video-animation-delay-value")
+          br
+          input(type="range" id="video-animation-delay-value-range" step="1" min="0" max="20")
+        
+      
+      div(id="video-animation-duration")
+        div
+          | Длительность анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="video-animation-duration-value")
+          br
+          input(type="range" id="video-animation-duration-value-range" step="1" min="0" max="20")    
+    hr
+    div(id="video-timeout" style="text-align: center")
+      div(id="video-display-none")
+        div
+          | Скрытие блока:
+          br
+          input(type="checkbox" id="video-display-none-value")
+      div(id="video-timeout")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="video-timeout-hour-value")
+          br
+          input(type="range" id="video-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="video-timeout-minute-value")
+          br
+          input(type="range" id="video-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="video-timeout-second-value")
+          br
+          input(type="range" id="video-timeout-second-value-range" step="1" min="0" max="60")

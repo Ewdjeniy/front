@@ -1,0 +1,382 @@
+section(id="list-settings")
+  h1  Настройки
+  form(name="listSettings" method="post" enctype="multipart/form-data")
+    br
+    h4
+      div(id="marginsIndicator" class="group")
+        | ВНЕШНИЕ ОТСТУПЫ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="margins")
+      br
+      h4
+        div(id="listMarginGroupIndicator" class="group")
+          | &#8195;
+          | Настройка отступов
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="listMarginEvery")
+        br
+        | &#8195;
+        | Внешний отступ сверху:
+        br
+        | &#8195;
+        input(id="list-margin-top-value" type="number")
+        br
+        input(id="list-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ снизу:
+        br
+        | &#8195;
+        input(id="list-margin-bottom-value" type="number")
+        br
+        input(id="list-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ слева:
+        br
+        | &#8195;
+        input(id="list-margin-left-value" type="number")
+        br
+        input(id="list-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | &#8195;
+        | Внешний отступ справа:
+        br
+        | &#8195;
+        input(id="list-margin-right-value" type="number")
+        br
+        input(id="list-margin-right-value-range" type="range" min="0" max="100" step="1")
+      br
+      h4
+        div(id="listVerticalIndicator" class="group")
+          | &#8195;
+          | Вертикаль
+          span(class="glyphicon glyphicon-triangle-bottom")
+      br
+      div(id="list-show-vertical-settings")
+        | &#8195;
+        | Верх
+        input(id="listMarginTop" name="vertical" type="radio" value="up")
+        br
+        | &#8195;
+        | Центр
+        input(id="listMarginCenter" name="vertical" type="radio" value="center")
+        br
+        | &#8195;
+        | Низ
+        input(id="listMarginBottom" name="vertical" type="radio" value="down")
+      hr
+    br
+    h4
+      div(id="listSettingsIndicator" class="group")
+        | НАСТРОЙКА СПИСКА
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="listSettings")
+      br
+      h4
+        div(id="listIconStyleIndicator" class="group")
+          | &#8195;
+          | Выбор иконки 
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="list-icon-style-settings")
+        br
+        div(class="listIcons")
+          img(class="listIconImg" src=require("./images/0.png"))
+          img(class="listIconImg" src=require("./images/11.png"))
+          img(class="listIconImg" src=require("./images/17.png"))
+          img(class="listIconImg" src=require("./images/19.png"))
+        hr
+      br
+      h4
+        div(id="listAddStringIndicator" class="group")
+          | &#8195;
+          | Добавление строки  
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="list-add-string-settings")
+        br
+        div(id="liItems")
+        br
+        input(type="button" id="addListItem" value="Добавить строку")
+        hr
+      br
+      h4
+        div(id="listSpaceIndicator" class="group")
+          | &#8195;
+          | Расстояние между полями
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="show-list-space-settings")
+        br
+        | &#8195;
+        input(id="list-space-value" type="number")
+        br
+        input(id="list-space-value-range" type="range" min="5" max="30" step="1")
+        hr
+      br 
+      h4
+        div(id="listFontIndicator" class="group")
+          | &#8195;
+          | Настройка шрифта
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="show-font-settings")
+        br
+        h4
+          div(id="listFontFamilyIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Выбор шрифта
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="list-font-family-settings")
+          br
+          div
+            | &#8195;
+            | &#8195;
+            input(type="checkbox" id="listBold")
+            | Bold
+            br
+            | &#8195;
+            | &#8195;
+            select(id="listFontFamilySelect")
+              option(value="Tahoma, Arial, Verdana")  Tahoma
+              option(value="Arial, Tahoma, Verdana") Arial
+              option(value="Verdana, Tahoma, Arial") Verdana
+              option(value="Georgia, Tahoma, Arial")  Georgia
+              option(value="Montserrat, Arial, Verdana")  Montserrat Black
+              option(value="Roboto, Arial, Tahoma")  Roboto Black
+        br
+        
+        
+        h4
+          div(id="listFontSizeIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Размер шрифта
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="list-font-size-settings")
+          div
+            br
+            | &#8195;
+            | &#8195;
+            input(id="list-font-size-value" type="number")
+            br
+            input(id="list-font-size-value-range" type="range" min="1" max="100" step="1")
+            hr
+        br
+        
+        
+        h4
+          div(id="listLineHeightIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Межстрочный интервал 
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="list-line-height-settings")
+          | &#8195;
+          | &#8195;
+          input(id="list-line-height-value" type="number")
+          br
+          input(id="list-line-height-value-range" type="range" min="1" max="200" step="1")      
+          hr
+        br
+        
+        h4
+          div(id="listFontColorIndicator" class="group")
+            | &#8195;
+            | &#8195;
+            | Выбор цвета
+            span(class="glyphicon glyphicon-triangle-bottom")
+        div(id="list-font-color-settings")
+          br
+          | &#8195;
+          | &#8195;
+          input(type="color" value="0" id="list-color-value")
+          hr
+      br
+      h4
+        div(id="listTextShadowIndicator" class="group")
+          | &#8195;
+          | Тени шрифта
+          span(class="glyphicon glyphicon-triangle-bottom")
+      div(id="show-list-text-shadow-settings")
+        br
+        | &#8195;
+        | Вкл
+        input(id="listTextShadowRadioOn" type="radio" name="textShadow")
+        | Выкл
+        input(id="listTextShadowRadioOff" type="radio" name="textShadow" checked)
+        div(id="list-text-shadow")
+          div(id="list-text-shadow-color" style="text-align: center")
+            div
+              | Цвет:
+              br
+              input(type="color" value="0" id="list-text-shadow-color-value")
+          div(id="list-text-shadow-vertical-length" style="text-align: center")
+            div
+              | Вертикальное смещение:
+              br
+              input(type="number" value="0" id="list-text-shadow-vertical-value")
+              input(type="range" id="list-text-shadow-vertical-value-range" step="1" min="-20" max="20")
+          div(id="list-text-shadow-horizontal-length" style="text-align: center")
+            div
+              | Горизонтальное смещение:
+              br
+              input(type="number" value="0" id="list-text-shadow-horizontal-value")
+              input(type="range" id="list-text-shadow-horizontal-value-range" step="1" min="-20" max="20")        
+          div(id="list-text-shadow-blur" style="text-align: center")
+            div
+              | Размытие:
+              br
+              input(type="number" value="0" id="list-text-shadow-blur-value")
+              input(type="range" id="list-text-shadow-blur-value-range" step="1" min="0" max="20")
+          div(id="list-text-shadow-opacity" style="text-align: center")
+            div
+              | Непрозрачность:
+              br
+              input(type="number" value="100" id="list-text-shadow-opacity-value")
+              input(type="range" id="list-text-shadow-opacity-value-range" step="1" min="0" max="100")
+        hr
+    br
+    h4
+      div(id="listAnimationIndicator" class="group")
+        | АНИМАЦИЯ
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="show-list-animation-settings")
+      div(id="list-animation-type" style="text-align:center")
+        div
+          br
+          | Тип анимации:
+          br
+          select(id="list-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+        div(id="list-animation-delay" style="text-align:center")
+          div
+            | Задержка анимации (сек):
+            br
+            input(type="number" min="0" max="20" value="0" id="list-animation-delay-value")
+            br
+            input(type="range" id="list-animation-delay-value-range" step="1" min="0" max="20")
+
+
+        div(id="list-animation-duration" style="text-align:center")
+          div
+            | Длительность анимации (сек):
+            br
+            input(type="number" min="0" max="20" value="0" id="list-animation-duration-value")
+            br
+            input(type="range" id="list-animation-duration-value-range" step="1" min="0" max="20")    
+        hr
+    br
+    h4
+      div(id="listTimeoutIndicator" class="group")
+        | СКРЫТИЕ БЛОКА
+        span(class="glyphicon glyphicon-triangle-bottom")
+    div(id="show-list-timeout-settings")
+      div(id="list-display-none" style="text-align: center;")
+        div
+          br
+          input(type="checkbox" id="list-display-none-value")
+      div(id="list-timeout" style="text-align: center;")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="list-timeout-hour-value")
+          br
+          input(type="range" id="list-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="list-timeout-minute-value")
+          br
+          input(type="range" id="list-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="list-timeout-second-value")
+          br
+          input(type="range" id="list-timeout-second-value-range" step="1" min="0" max="60")

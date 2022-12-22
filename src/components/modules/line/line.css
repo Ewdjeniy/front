@@ -1,0 +1,94 @@
+.line_settings {
+  margin-top: -30px;
+}
+
+.lineBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: auto !important;
+  height: auto;
+  margin: 53px 5px;
+}
+
+.line {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin: 0;
+  background: transparent;
+}
+
+.lineWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  padding: 0;
+  border: 2px solid transparent;
+}
+
+.lineWrapper:hover {
+  .line_settings {
+    opacity: 1;
+    transition: all 0.4s linear;
+  }
+}
+
+#lineMarginEvery,
+#lineMargins,
+#line-show-vertical-settings,
+#lineSettings,
+#show-line-animation-settings,
+#show-line-timeout-settings,
+#line-choose-settings,
+#line-settings-under-menu,
+#line-color-settings,
+#line-height-settings,
+#line-style-settings {
+  display: none;
+}
+
+
+#lineMarginsIndicator,
+#lineMarginGroupIndicator,
+#lineVerticalIndicator,
+#lineSettingsIndicator,
+#lineAnimationIndicator,
+#lineTimeoutIndicator,
+#lineChooseIndicator,
+#lineSettingsUnderMenuIndicator,
+#lineHeightIndicator,
+#lineStyleIndicator,
+#lineColorIndicator {
+  cursor: pointer;
+  user-select: none;
+
+  span {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+#line-choose-settings {
+  padding: 0 20px;
+}
+
+#lineIcons {
+  width: 100%;
+  overflow: hidden;
+  img {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}
+
+.lineImg {
+  width: 100%;
+  margin: 0;
+}

@@ -1,0 +1,84 @@
+.formBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: auto !important;
+  margin: 24px 5px;
+}
+
+.formWrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  border: 2px solid transparent;
+  min-width: 120px;
+}
+
+.formWrapper:hover {
+  .form_settings {
+    opacity: 1;
+    transition: all 0.4s linear;
+  }
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.payInput {
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(222, 220, 220, 1);
+  font-family: Arial, Tahoma, Verdana;
+  font-size: 17px;
+  height: 46px;
+  margin-bottom: 1px;
+  font-weight: normal;
+  cursor: grab;
+}
+
+.paySubmit{
+  width: 100%;
+  background: #FFB600;
+  border-radius: 5px;
+  border: 1px solid #C18700;
+  font-family: Roboto, Arial, Tahoma;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  height: 64px;
+}
+
+.blue-background-class {
+  border: 1px dashed blue !important;
+  background: rgba(156, 209, 240, 0.9) !important;
+}
+
+#form-settings {
+  padding-bottom: 10rem;
+}
+
+#formSubmitBackgroundGradient, #formSubmitBorderEvery, #formInputBackgroundGradient, #formInputBorderEvery, #form-text-shadow, #form-shadow, #formMarginEvery, #form-text-shadow-settings, #form-shadow-settings, #form-inputs-settings, #form-submit-settings, #form-show-vertical-settings, #form-show-add-delete-settings, #form-show-inputs-font-settings, #formInput-background-types, #formInput-height, #form-show-inputs-border-settings, #formSubmitMarginEvery, #form-show-submit-font-settings, #formSubmit-background-types, #formSubmit-height, #form-show-submit-border-settings, #form-animation, #form-show-timeout-settings {
+  display: none;
+}
+
+#formMarginGroupIndicator, #formTextShadowIndicator, #formShadowIndicator, #formInputsIndicator, #formSubmitIndicator, #formVerticalIndicator, #formAddDeleteIndicator, #formInputsFontIndicator, #formInputsBackgroundIndicator, #formInputsSizeIndicator, #formInputsBorderIndicator, #formSubmitMarginIndicator, #formSubmitFontIndicator, #formSubmitBackgroundIndicator, #formSubmitSizeIndicator, #formSubmitBorderIndicator, #formAnimationIndicator, #formTimeoutIndicator {
+  cursor: pointer;
+  user-select: none;
+  span {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

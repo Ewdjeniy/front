@@ -1,0 +1,531 @@
+div(id="main-block-settings")
+  h1  Настройки
+  div(id="main-block-settings-body")
+    div(id="main-block-width" style="text-align: center;")
+      div
+        | Ширина блока:
+        br
+        input(id="main-block-width-value" type="number")
+        input(id="main-block-width-value-range" type="range" min="200" max="1100" step="1")
+    div(id="main-block-margin-top" style="text-align: center;")
+      div
+        | Внешний отступ сверху:
+        br
+        input(id="main-block-margin-top-value" type="number")
+        input(id="main-block-margin-top-value-range" type="range" min="0" max="100" step="1")
+    
+    div(id="main-block-margin-bottom" style="text-align: center;")
+      div
+        | Внешний отступ снизу:
+        br
+        input(id="main-block-margin-bottom-value" type="number")
+        input(id="main-block-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-padding-top" style="text-align: center;")
+      div
+        | Внутренний отступ сверху:
+        br
+        input(id="main-block-padding-top-value" type="number")
+        input(id="main-block-padding-top-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-padding-bottom" style="text-align: center;")
+      div
+        | Внутренний отступ снизу:
+        br
+        input(id="main-block-padding-bottom-value" type="number")
+        input(id="main-block-padding-bottom-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-padding-left" style="text-align: center;")
+      div
+        | Внутренний отступ слева:
+        br
+        input(id="main-block-padding-left-value" type="number")
+        input(id="main-block-padding-left-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-padding-right" style="text-align: center;")
+      div
+        | Внутренний отступ справа:
+        br
+        input(id="main-block-padding-right-value" type="number")
+        input(id="main-block-padding-right-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-opacity" style="text-align: center;")
+      div
+        | Непрозрачность:
+        br
+        input(id="main-block-opacity-value" type="number")
+        input(id="main-block-opacity-value-range" type="range" min="0" max="100" step="1")
+    div(id="main-block-background-types" style="text-align: center;")
+      div
+        | Цвет
+        input(type="radio" value="color" name="main-block-background-type" checked="")
+      div
+        | Градиент
+        input(type="radio" value="gradient" name="main-block-background-type")
+      div
+        | Изображение
+        input(type="radio" value="bgimage" name="main-block-background-type")
+      br
+      div
+        | Видео
+        input(type="radio" value="video" name="main-block-background-type")
+    div(class="main-block-background-color-settings" style="")
+      div(id="main-block-background-color" style="text-align: center;")
+        div
+          | Фон страницы:
+          br
+          input(id="main-block-main-color" type="color")
+        br
+        div
+          | Непрозрачность:
+          br
+          input(id="main-block-main-color-opacity" type="number" value="100")
+    br
+    div(class="main-block-background-gradient-settings" style="display: none")
+      div(id="main-block-background-gradient" style="text-align: center;")
+        div
+          | Цвет 1:
+          br
+          input(id="main-block-gradient-color-1" type="color")
+        br
+        div
+          | Цвет 2:
+          br
+          input(id="main-block-gradient-color-2" type="color")
+        br
+        div
+          | Угол:
+          br
+          input(id="main-block-gradient-angle" type="number" value="0")
+    br
+    div(class="main-block-background-image-settings" style="display: none")
+      div(id="main-block-background-image" style="text-align: center;")
+        div
+          | Фоновое изображение:
+          br
+          input(id="main-block-background-image-file" type="file")
+        br
+        div
+          | Размер фонового изображения:
+          br
+          select(id="main-block-background-image-size")
+            option(value="contain") Contain
+            option(value="cover") Cover
+        br
+        div
+          | Фиксация фонового изображения:
+          br
+          select(id="main-block-background-image-attachment")
+            option(value="scroll")  Scroll
+            option(value="fixed") Fixed
+        br
+        div
+          | Цвет:
+          br
+          input(id="main-block-background-image-color" type="color")
+        br
+        div
+          | Смешивание фонового изображения:
+          br
+          select(id="main-block-background-image-blend-mode")
+            option(value="unset") БЕЗ СМЕШИВАНИЯ
+            option(value="color") color
+            option(value="color-burn")  color-burn
+            option(value="color-dodge") color-dodge
+            option(value="darken")  darken
+            option(value="difference")  difference
+            option(value="exclusion") exclusion
+            option(value="hard-kight")  hard-light
+            option(value="hue") hue
+            option(value="lighten") lighten
+            option(value="luminosity")  luminosity
+            option(value="multiply" ) multiply
+            option(value="normal")  normal
+            option(value="overlay") overlay
+            option(value="saturation")  saturation
+            option(value="screen")  screen
+            option(value="soft-light")  soft-light
+        br
+        div
+          | Повторять по вертикали:
+          br
+          select(id="main-block-background-image-repeat-y")
+            option(value="no-repeat") Не повторять
+            option(value="repeat")  Повторять
+        br
+        div
+          | Повторять по горизонтали:
+          br
+          select(id="main-block-background-image-repeat-x")
+            option(value="no-repeat") Не повторять
+            option(value="repeat")  Повторять
+          
+        br
+    hr
+    div(class="main-block-background-video-settings" style="display: none")
+      div(id="main-block-background-video" style="text-align: center;")
+        div
+          | Ссылка:
+          br
+          input(id="main-block-videolink" type="text")
+        br
+        div
+          | Зациклить:
+          br
+          input(id="main-block-video_loop" value="1" type="checkbox")
+        br
+        div
+          | Включить звук:
+          br
+          input(id="main-block-video_unmute" value="1" type="checkbox")
+    br
+    div(id="main-block-border-settings")
+      div(id="main-block-border-settings-choice" style="text-align: center")
+        div
+          | Все границы
+          input(type="radio" value="allborders" name="border-choice" checked="")
+        div
+          | Каждая граница
+          input(type="radio" value="eachborders" name="border-choice")
+      div(id="main-block-all-border-settings")
+        div(id="main-block-border-color" style="text-align: center;")
+          div
+            | Цвет границы:
+            br
+            input(id="main-block-border-color-value" type="color")
+        br
+        div(id="main-block-border-thickness" style="text-align: center;")
+          div
+            | Толщина границы:
+            br
+            input(id="main-block-border-thickness-value" type="number")
+            input(id="main-block-border-thickness-value-range" type="range" min="0" max="20" step="1")
+        div(id="main-block-border-style" style="text-align: center;")
+          div
+            | Стиль границы:
+            br
+            select(id="main-block-border-style-value")
+              option(value="solid") solid
+              option(value="dashed")  dashed
+              option(value="dotted")  dotted
+              option(value="double")  double
+              option(value="groove")  groove
+              option(value="inset") inset
+              option(value="none")  none
+              option(value="outset")  outset
+              option(value="ridge") ridge
+        div(id="main-block-border-radius" style="text-align: center;")
+          div
+            | Загругление краев:
+            br
+            input(id="main-block-border-radius-value" value="0" type="number")
+            input(id="main-block-border-radius-value-range" type="range" min="0" max="1000" step="1")
+      div(id="main-block-each-border-settings" style="display:none")
+        //Левая граница
+        div(id="main-block-border-left-color" style="text-align: center;")
+          div
+            | Цвет левой границы:
+            br
+            input(id="main-block-border-left-color-value" type="color")
+        br
+        div(id="main-block-border-left-thickness" style="text-align: center;")
+          div
+            | Толщина левой границы:
+            br
+            input(id="main-block-border-left-thickness-value" type="number")
+            input(id="main-block-border-left-thickness-value-range" type="range" min="0" max="20" step="1")
+        div(id="main-block-border-left-style" style="text-align: center;")
+          div
+            | Стиль левой границы:
+            br
+            select(id="main-block-border-left-style-value")
+              option(value="solid") solid
+              option(value="dashed")  dashed
+              option(value="dotted")  dotted
+              option(value="double")  double
+              option(value="groove")  groove
+              option(value="inset") inset
+              option(value="none")  none
+              option(value="outset")  outset
+              option(value="ridge") ridge
+
+        //Верхняя граница
+        div(id="main-block-border-top-color" style="text-align: center;")
+          div
+            | Цвет верхней границы:
+            br
+            input(id="main-block-border-top-color-value" type="color")
+        br
+        div(id="main-block-border-top-thickness" style="text-align: center;")
+          div
+            | Толщина верхней границы:
+            br
+            input(id="main-block-border-top-thickness-value" type="number")
+            input(id="main-block-border-top-thickness-value-range" type="range" min="0" max="20" step="1")
+        div(id="main-block-border-top-style" style="text-align: center;")
+          div
+            | Стиль верхней границы:
+            br
+            select(id="main-block-border-top-style-value")
+              option(value="solid") solid
+              option(value="dashed")  dashed
+              option(value="dotted")  dotted
+              option(value="double")  double
+              option(value="groove")  groove
+              option(value="inset") inset
+              option(value="none")  none
+              option(value="outset")  outset
+              option(value="ridge") ridge
+        div(id="main-block-border-top-left-radius" style="text-align: center;")
+          div
+            | Загругление верхнего левого края:
+            br
+            input(id="main-block-border-top-left-radius-value" value="0" type="number")
+            input(id="main-block-border-top-left-radius-value-range" type="range" min="0" max="1000" step="1")
+        div(id="main-block-border-top-right-radius" style="text-align: center;")
+          div
+            | Загругление верхнего правого края:
+            br
+            input(id="main-block-border-top-right-radius-value" value="0" type="number")
+            input(id="main-block-border-top-right-radius-value-range" type="range" min="0" max="1000" step="1")
+
+        //Правая граница
+        div(id="main-block-border-right-color" style="text-align: center;")
+          div
+            | Цвет правой границы:
+            br
+            input(id="main-block-border-right-color-value" type="color")
+        br
+        div(id="main-block-border-right-thickness" style="text-align: center;")
+          div
+            | Толщина правой границы:
+            br
+            input(id="main-block-border-right-thickness-value" type="number")
+            input(id="main-block-border-right-thickness-value-range" type="range" min="0" max="20" step="1")
+        div(id="main-block-border-right-style" style="text-align: center;")
+          div
+            | Стиль правой границы:
+            br
+            select(id="main-block-border-right-style-value")
+              option(value="solid") solid
+              option(value="dashed")  dashed
+              option(value="dotted")  dotted
+              option(value="double")  double
+              option(value="groove")  groove
+              option(value="inset") inset
+              option(value="none")  none
+              option(value="outset")  outset
+              option(value="ridge") ridge
+        
+        //  <!--Нижняя граница--)
+        div(id="main-block-border-bottom-color" style="text-align: center;")
+          div
+            | Цвет нижней границы:
+            br
+            input(id="main-block-border-bottom-color-value" type="color")
+        br
+        div(id="main-block-border-bottom-thickness" style="text-align: center;")
+          div
+            | Толщина нижней границы:
+            br
+            input(id="main-block-border-bottom-thickness-value" type="number")
+            input(id="main-block-border-bottom-thickness-value-range" type="range" min="0" max="20" step="1")
+        div(id="main-block-border-bottom-style" style="text-align: center;")
+          div
+            | Стиль нижней границы:
+            br
+            select(id="main-block-border-bottom-style-value")
+              option(value="solid") solid
+              option(value="dashed")  dashed
+              option(value="dotted")  dotted
+              option(value="double")  double
+              option(value="groove")  groove
+              option(value="inset") inset
+              option(value="none")  none
+              option(value="outset")  outset
+              option(value="ridge") ridge
+        div(id="main-block-border-bottom-left-radius" style="text-align: center;")
+          div
+            | Загругление нижнего левого края:
+            br
+            input(id="main-block-border-bottom-left-radius-value" value="0" type="number")
+            input(id="main-block-border-bottom-left-radius-value-range" type="range" min="0" max="1000" step="1")
+        div(id="main-block-border-bottom-right-radius" style="text-align: center;")
+          div
+            | Загругление нижнего правого края:
+            br
+            input(id="main-block-border-bottom-right-radius-value" value="0" type="number")
+            input(id="main-block-border-bottom-right-radius-value-range" type="range" min="0" max="1000" step="1")
+    hr
+    div(id="main-block-shadow-settings")
+      label(style="text-align:center")  Тени
+      div(id="main-block-shadow-vertical-length" style="text-align: center")
+        div
+          | Вертикальное смещение:
+          br
+          input(type="number" value="0" id="main-block-shadow-vertical-value")
+          input(type="range" id="main-block-shadow-vertical-value-range" step="1" min="-200" max="200")
+      div(id="main-block-shadow-horizontal-length" style="text-align: center")
+        div
+          | Горизонтальное смещение:
+          br
+          input(type="number" value="0" id="main-block-shadow-horizontal-value")
+          input(type="range" id="main-block-shadow-horizontal-value-range" step="1" min="-200" max="200")
+      div(id="main-block-shadow-blur" style="text-align: center")
+        div
+          | Размытие:
+          br
+          input(type="number" value="0" id="main-block-shadow-blur-value")
+          input(type="range" id="main-block-shadow-blur-value-range" step="1" min="0" max="200")
+      div(id="main-block-shadow-spread" style="text-align: center")
+        div 
+          | Размах:
+          br
+          input(type="number" value="0" id="main-block-shadow-spread-value")
+          input(type="range" id="main-block-shadow-spread-value-range" step="1" min="-200" max="200")
+      div(id="main-block-shadow-color" style="text-align: center")
+        div
+          | Цвет:
+          br
+          input(type="color" value="0" id="main-block-shadow-color-value")
+      div(id="main-block-shadow-opacity" style="text-align: center")
+        div
+          | Непрозрачность:
+          br
+          input(type="number" value="100" id="main-block-shadow-opacity-value")
+          input(type="range" id="main-block-shadow-opacity-value-range" step="1" min="0" max="100")
+      div(id="main-block-shadow-inset" style="text-align: center")
+        div
+          | Внутренняя тень:
+          input(type="checkbox" id="main-block-shadow-inset-value")    
+    hr
+    div(id="main-block-animation" style="text-align:center")
+      div(id="main-block-animation-type")
+        div
+          | Тип анимации:
+          br
+          select(id="main-block-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+              option(value="rotateInUpRight") rotateInUpRight
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+      div(id="main-block-animation-delay")
+        div
+          | Задержка анимации (сек):
+          br
+          input(type="number" min="0" max="10" value="0" id="main-block-animation-delay-value")
+      div(id="main-block-animation-duration")
+        div
+          | Длительность анимации (сек):
+          br
+          input(type="number" min="0" max="10" value="0" id="main-block-animation-duration-value")
+    hr
+    div(id="main-block-timeout" style="text-align: center")
+      div(id="main-block-display-none")
+        div
+          | Скрыть блок:
+          br
+          input(type="checkbox" id="main-block-display-none-value")
+      div(id="main-block-timeout")
+        div
+          | Часы: 
+          br
+          input(type="number" min="0" max="24" id="main-block-timeout-hour-value")
+        br
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="main-block-timeout-minute-value")
+        br
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="main-block-timeout-second-value")
+        
+      
+    
+  
+

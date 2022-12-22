@@ -1,0 +1,415 @@
+div(id="image-settings")
+  h1  Настройки
+  form(name="imgFile" method="post" enctype="multipart/form-data")
+    div 
+      | Загрузка изображения:
+      br
+      input(name="img" type="file")
+    hr
+    div 
+      | Выберите картинку:
+      br
+      select(id="pictureSrc")
+        option(class="pictures" value="https://avatars.mds.yandex.net/get-pdb/38069/9013e3ba-b082-46eb-9873-512724423a84/s1200?webp=false") Standart
+        option(class="pictures" value="https://avante.biz/wp-content/uploads/Winter-Backgrounds-Scenes/Winter-Backgrounds-Scenes-042.jpg")  Christmas
+        option(class="pictures" value="https://www.1zoom.ru/big2/146/273701-alexfas01.jpg") eiffel
+        option(class="pictures" value="https://images.wallpaperscraft.com/image/island_sky_palm_tree_sand_81959_1280x720.jpg")  Thailand
+        option(class="pictures" value="https://mtdata.ru/u28/photo0787/20433820546-0/original.jpg") girl
+        option(class="pictures" value="https://www.1zoom.ru/big2/307/289625-Sepik.jpg") Child
+    hr
+    div 
+      | Пропорциональность:
+      input(name="proportionCheckB" type="checkbox" value="1" id="proportionID")
+    hr
+    div 
+      | Вертикальное выравнивание:
+      br
+      | Верх
+      input(id="imgMarginTop" name="vertical" type="radio" value="up")
+      br
+      | Центр
+      input(id="imgMarginCenter" name="vertical" type="radio" value="center")
+      br
+      | Низ
+      input(id="imgMarginBottom" name="vertical" type="radio" value="down")
+    br
+    hr
+    div
+      | Внешний отступ:
+      br
+      br
+      div(id="marginEvery")
+        | Внешний отступ сверху:
+        br
+        input(id="img-margin-top-value" type="number")
+        br
+        input(id="img-margin-top-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ снизу:
+        br
+        input(id="img-margin-bottom-value" type="number")
+        br
+        input(id="img-margin-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ слева:
+        br
+        input(id="img-margin-left-value" type="number")
+        br
+        input(id="img-margin-left-value-range" type="range" min="0" max="100" step="1")
+        | Внешний отступ справа:
+        br
+        input(id="img-margin-right-value" type="number")
+        br
+        input(id="img-margin-right-value-range" type="range" min="0" max="100" step="1")
+    hr
+    div
+      | Внутренний отступ:
+      br
+      | Все границы
+      input(id="paddingRadioAll" name="padding" type="radio" value="all" checked)
+      br
+      | Каждая граница
+      input(id="paddingRadioEvery" name="padding" type="radio" value="each")
+      div(id="paddingAll")
+        input(id="img-padding-value" type="number")
+        br
+        input(id="img-padding-value-range" type="range" min="0" max="100" step="1")
+      div(id="paddingEvery")
+        | Внутренний отступ сверху:
+        br
+        input(id="img-padding-top-value" type="number")
+        br
+        input(id="img-padding-top-value-range" type="range" min="0" max="100" step="1")
+        | Внутренний отступ снизу:
+        br
+        input(id="img-padding-bottom-value" type="number")
+        br
+        input(id="img-padding-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Внутренний отступ слева:
+        br
+        input(id="img-padding-left-value" type="number")
+        br
+        input(id="img-padding-left-value-range" type="range" min="0" max="100" step="1")
+        | Внутренний отступ справа:
+        br
+        input(id="img-padding-right-value" type="number")
+        br
+        input(id="img-padding-right-value-range" type="range" min="0" max="100" step="1")
+    hr
+    div
+      | Граница изображения:
+      br
+      | Все границы
+      input(id="imgBorderRadioAll" name="img_Border" type="radio" value="all" checked)
+      br
+      | Каждая граница
+      input(id="imgBorderRadioEvery" name="img_Border" type="radio" value="each")
+      br
+      br
+      div(id="imgBorderAll")
+        | Цвет границы:
+        br
+        input(id="border-color-value" type="color")
+        br
+        | Толщина границы:
+        br
+        input(id="img-border-value" type="number")
+        br
+        input(id="img-border-value-range" type="range" min="0" max="100" step="1")
+        | Закругление углов:
+        br
+        input(id="img-border-radius" type="number")
+        br
+        input(id="img-border-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль границы:
+        br
+        select(id="img-border-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        
+      
+      div(id="imgBorderEvery")
+        | Цвет верхней границы:
+        br
+        input(id="img-border-top-color" type="color")
+        br
+        | Толщина верхней границы:
+        br
+        input(id="img-border-top-value" type="number")
+        br
+        input(id="img-border-top-value-range" type="range" min="0" max="100" step="1")
+        | Закругление верхнего левого края:
+        br
+        input(id="img-border-left-top-radius" type="number")
+        br
+        input(id="img-border-left-top-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль верхней границы:
+        br
+        select(id="img-border-top-style-value")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет правой границы:
+        br
+        input(id="img-border-right-color" type="color")
+        br
+        | Толщина правой границы:
+        br
+        input(id="img-border-right-value" type="number")
+        br
+        input(id="img-border-right-value-range" type="range" min="0" max="100" step="1")
+        | Закругление правого верхнего угла:
+        br
+        input(id="img-border-right-radius" type="number")
+        br
+        input(id="img-border-right-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль правой границы:
+        br
+        select(id="img-border-right-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        br
+        | Цвет нижней границы:
+        br
+        input(id="img-border-bottom-color" type="color")
+        br
+        | Толщина нижней границы:
+        br
+        input(id="img-border-bottom-value" type="number")
+        br
+        input(id="img-border-bottom-value-range" type="range" min="0" max="100" step="1")
+        | Закругление правого нижнего угла:
+        br
+        input(id="img-border-bottom-right-radius" type="number")
+        br
+        input(id="img-border-bottom-right-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль нижней границы:
+        br
+        select(id="img-border-bottom-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+        | Цвет левой границы:
+        br
+        br
+        input(id="img-border-left-color" type="color")
+        br
+        | Толщина левой границы:
+        br
+        input(id="img-border-left-value" type="number")
+        br
+        input(id="img-border-left-value-range" type="range" min="0" max="100" step="1")
+        | Закругление левого нижнего угла:
+        br
+        input(id="img-border-bottom-left-radius" type="number")
+        br
+        input(id="img-border-bottom-left-radius-range" type="range" min="0" max="100" step="1")
+        | Стиль левой границы:
+        br
+        select(id="img-border-left-style")
+          option(value="none")  нет границы
+          option(value="solid") solid
+          option(value="dashed")  dashed
+          option(value="dotted")  dotted
+          option(value="double")  double
+        br
+    hr
+    div(id="img-shadow-settings")
+      label(style="text-align:center")  Тени
+      br
+      | Вкл
+      input(id="imgShadowRadioOn" name="shadow" type="radio" value="1")
+      | Выкл
+      input(id="imgShadowRadioOff" name="shadow" type="radio" value="0" checked)
+      div(id="img-shadow")
+        div(id="img-shadow-color" style="text-align: center")
+          div
+            | Цвет:
+            br
+            input(type="color" value="0" id="img-shadow-color-value")
+        div(id="img-shadow-vertical-length" style="text-align: center")
+          div
+            | Вертикальное смещение:
+            br
+            input(type="number" value="0" id="img-shadow-vertical-value")
+            input(type="range" id="img-shadow-vertical-value-range" step="1" min="-200" max="200")
+        div(id="img-shadow-horizontal-length" style="text-align: center")
+          div
+            | Горизонтальное смещение:
+            br
+            input(type="number" value="0" id="img-shadow-horizontal-value")
+            input(type="range" id="img-shadow-horizontal-value-range" step="1" min="-200" max="200")
+        div(id="img-shadow-blur" style="text-align: center")
+          div
+            | Размытие:
+            br
+            input(type="number" value="0" id="img-shadow-blur-value")
+            input(type="range" id="img-shadow-blur-value-range" step="1" min="0" max="200")
+        div(id="img-shadow-spread" style="text-align: center")
+          div
+            | Размах:
+            br
+            input(type="number" value="0" id="img-shadow-spread-value")
+            input(type="range" id="img-shadow-spread-value-range" step="1" min="-200" max="200")
+        div(id="img-shadow-opacity" style="text-align: center")
+          div
+            | Непрозрачность:
+            br
+            input(type="number" value="100" id="img-shadow-opacity-value")
+            input(type="range" id="img-shadow-opacity-value-range" step="1" min="0" max="100")
+        div(id="img-shadow-inset" style="text-align: center")
+          div
+            | Внутренняя тень:
+            input(type="checkbox" id="img-shadow-inset-value")
+    hr
+    div(id="img-animation" style="text-align:center")
+      div(id="img-animation-type")
+        div
+          | Тип анимации:
+          br
+          select(id="img-animation-type-value")
+            option(value="none")  NONE
+            optgroup(label="Attention Seekers")
+              option(value="bounce")  bounce
+              option(value="flash") flash
+              option(value="pulse") pulse
+              option(value="rubberBand")  rubberBand
+              option(value="shake") shake
+              option(value="swing") swing
+              option(value="tada")  tada
+              option(value="wobble")  wobble
+              option(value="jello") jello
+              option(value="heartBeat") heartBeat
+            optgroup(label="Bouncing Entrances")
+              option(value="bounceIn")  bounceIn
+              option(value="bounceInDown")  bounceInDown
+              option(value="bounceInLeft")  bounceInLeft
+              option(value="bounceInRight") bounceInRight
+              option(value="bounceInUp")  bounceInUp
+            optgroup(label="Bouncing Exits")
+              option(value="bounceOut") bounceOut
+              option(value="bounceOutDown") bounceOutDown
+              option(value="bounceOutLeft") bounceOutLeft
+              option(value="bounceOutRight")  bounceOutRight
+              option(value="bounceOutUp") bounceOutUp
+            optgroup(label="Fading Entrances")
+              option(value="fadeIn")  fadeIn
+              option(value="fadeInDown")  fadeInDown
+              option(value="fadeInDownBig") fadeInDownBig
+              option(value="fadeInLeft")  fadeInLeft
+              option(value="fadeInLeftBig") fadeInLeftBig
+              option(value="fadeInRight") fadeInRight
+              option(value="fadeInRightBig")  fadeInRightBig
+              option(value="fadeInUp")  fadeInUp
+              option(value="fadeInUpBig") fadeInUpBig
+            optgroup(label="Fading Exits")
+              option(value="fadeOut") fadeOut
+              option(value="fadeOutDown") fadeOutDown
+              option(value="fadeOutDownBig")  fadeOutDownBig
+              option(value="fadeOutLeft") fadeOutLeft
+              option(value="fadeOutLeftBig")  fadeOutLeftBig
+              option(value="fadeOutRight")  fadeOutRight
+              option(value="fadeOutRightBig") fadeOutRightBig
+              option(value="fadeOutUp") fadeOutUp
+              option(value="fadeOutUpBig")  fadeOutUpBig
+            optgroup(label="Flippers")
+              option(value="flip")  flip
+              option(value="flipInX") flipInX
+              option(value="flipInY") flipInY
+              option(value="flipOutX")  flipOutX
+              option(value="flipOutY")  flipOutY
+            optgroup(label="Lightspeed")
+              option(value="lightSpeedIn")  lightSpeedIn
+              option(value="lightSpeedOut") lightSpeedOut
+            optgroup(label="Rotating Entrances")
+              option(value="rotateIn")  rotateIn
+              option(value="rotateInDownLeft")  rotateInDownLeft
+              option(value="rotateInDownRight") rotateInDownRight
+              option(value="rotateInUpLeft")  rotateInUpLeft
+            optgroup(label="Rotating Exits")
+              option(value="rotateOut") rotateOut
+              option(value="rotateOutDownLeft") rotateOutDownLeft
+              option(value="rotateOutDownRight")  rotateOutDownRight
+              option(value="rotateOutUpLeft") rotateOutUpLeft
+              option(value="rotateOutUpRight")  rotateOutUpRight
+            optgroup(label="Sliding Entrances")
+              option(value="slideInUp") slideInUp
+              option(value="slideInDown") slideInDown
+              option(value="slideInLeft") slideInLeft
+              option(value="slideInRight")  slideInRight            
+            optgroup(label="Sliding Exits")
+              option(value="slideOutUp")  slideOutUp
+              option(value="slideOutDown")  slideOutDown
+              option(value="slideOutLeft")  slideOutLeft
+              option(value="slideOutRight") slideOutRight          
+            optgroup(label="Zoom Entrances")
+              option(value="zoomIn")  zoomIn
+              option(value="zoomInDown")  zoomInDown
+              option(value="zoomInLeft")  zoomInLeft
+              option(value="zoomInRight") zoomInRight
+              option(value="zoomInUp")  zoomInUp
+            optgroup(label="Zoom Exits")
+              option(value="zoomOut") zoomOut
+              option(value="zoomOutDown") zoomOutDown
+              option(value="zoomOutLeft") zoomOutLeft
+              option(value="zoomOutRight")  zoomOutRight
+              option(value="zoomOutUp") zoomOutUp
+            optgroup(label="Specials")
+              option(value="hinge") hinge
+              option(value="jackInTheBox")  jackInTheBox
+              option(value="rollIn")  rollIn
+              option(value="rollOut") rollOut
+      div(id="img-animation-delay")
+        div
+          | Задержка анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="img-animation-delay-value")
+          br
+          input(type="range" id="img-animation-delay-value-range" step="1" min="0" max="20")
+        
+      
+      div(id="img-animation-duration")
+        div
+          | Длительность анимации (сек):
+          br
+          input(type="number" min="0" max="20" value="0" id="img-animation-duration-value")
+          br
+          input(type="range" id="img-animation-duration-value-range" step="1" min="0" max="20")    
+    hr
+    div(id="img-timeout" style="text-align: center")
+      div(id="img-display-none")
+        div
+          | Скрытие блока:
+          br
+          input(type="checkbox" id="img-display-none-value")
+      div(id="img-timeout")
+        div
+          | Часы:
+          br
+          input(type="number" min="0" max="24" id="img-timeout-hour-value")
+          br
+          input(type="range" id="img-timeout-hour-value-range" step="1" min="0" max="24")
+        div
+          | Минуты:
+          br
+          input(type="number" min="0" max="60" id="img-timeout-minute-value")
+          br
+          input(type="range" id="img-timeout-minute-value-range" step="1" min="0" max="60")
+        div
+          | Секунды:
+          br
+          input(type="number" min="0" max="60" id="img-timeout-second-value")
+          br
+          input(type="range" id="img-timeout-second-value-range" step="1" min="0" max="60")
